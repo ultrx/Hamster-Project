@@ -11,7 +11,7 @@
 <body>
     <div class="divHeader">
         <header>  
-            <img class="logo" src="images/Untitled-1logo2.png" onmouseover="this.src='images/hover2.png'" onmouseout="this.src='images/Untitled-1logo2.png'"/>
+            <a href="home.html" class="logo"><img class="logo" src="images/logo1.png" onmouseover="this.src='images/hover2.png'" onmouseout="this.src='images/logo1.png'"/></a>
             <nav>
                 <ul class="nav_links">
                     <li><a href="#">ABOUT</a></li>
@@ -27,26 +27,25 @@
         <div class="form-box">
             <div class="button-box">
                 <div id="btn"></div>
-                <button id="login-btn" type="button" class="toggle-btn" onclick="login();func()">Log In</button>
+                <button id="login-btn" type="button" class="toggle-btn" onclick="login()">Log In</button>
                 <button id="register-btn" type="button" class="toggle-btn" onclick="register()">Register</button>
             </div>
             <div class="social-icons">
-                <a href="https://www.instagram.com/florian.alshiqi" target="_blank"><img src="images/fb.png">
-                <a href="https://www.instagram.com/edon.krasniiqi" target="_blank"><img src="images/tw.png">
-                <a href="https://www.instagram.com/kushtrim_ib" target="_blank"><img src="images/gp.png">
+                <a href="https://www.instagram.com/florian.alshiqi" target="_blank"><img src="images/fb.png"></a>
+                <a href="https://www.instagram.com/edon.krasniiqi" target="_blank"><img src="images/tw.png"></a>
+                <a href="https://www.instagram.com/kushtrim_ib" target="_blank"><img src="images/gp.png"></a>
             </div>
-            <form id="login" class="input-group">
-                <input type="text" class="input-field" placeholder="User" required>
-                <input type="text" class="input-field" placeholder="Password" required>
+            <form id="login" name="myForm" class="input-group">
+                <input type="text" class="input-field" placeholder="User" name="name" required>
+                <input type="password" class="input-field" placeholder="Password" name="password" required>
                 <button type="submit" class="submit-btn" style="color:white;">Log In</button>
             </form>
             <form id="register" class="input-group">
-                <input type="text" class="input-field" placeholder="User" required>
-                <input type="email" class="input-field" placeholder="Email" required>
-                <input type="text" class="input-field" placeholder="Password" required>
+                <input type="text" class="input-field" placeholder="User" name="name" required>
+                <input type="email" class="input-field" placeholder="Email" name="email" required>
+                <input type="password" class="input-field" placeholder="Password" name="password" required>
                 <button type="submit" class="submit-btn" style="color:white;">Register</button>
             </form>
-            
         </div>
     </div>
     <script>
