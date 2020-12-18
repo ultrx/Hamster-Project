@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatibel" content="IE=edge">
-    <title>Projekti</title>
+    <title>Hamster Store - Log In</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="login-form.css">      
@@ -21,8 +21,49 @@
                     <li><a href="#">FAQ</a></li>
                 </ul>
             </nav>
-            <a class="cta" href="#"><button>Contact</button></a>
+            <a class="cta" href="#"><button class="contact-btn">Contact</button></a>
         </header>
     </div>
+    <div class="hero">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button id="login-btn" type="button" class="toggle-btn" onclick="login();func()">Log In</button>
+                <button id="register-btn" type="button" class="toggle-btn" onclick="register()">Register</button>
+            </div>
+            <div class="social-icons">
+                <img src="images/fb.png">
+                <img src="images/tw.png">
+                <img src="images/gp.png">
+            </div>
+            <form id="login" class="input-group">
+                <input type="text" class="input-field" placeholder="User" required>
+                <input type="text" class="input-field" placeholder="Password" required>
+                <button type="submit" class="submit-btn" style="color:white;">Log In</button>
+            </form>
+            <form id="register" class="input-group">
+                <input type="text" class="input-field" placeholder="User" required>
+                <input type="email" class="input-field" placeholder="Email" required>
+                <input type="text" class="input-field" placeholder="Password" required>
+                <button type="submit" class="submit-btn" style="color:white;">Register</button>
+            </form>
+            
+        </div>
+    </div>
+    <script>
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        var z = document.getElementById("btn");
+        function register(){
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+        function login(){
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0px";
+        }
+    </script>
 </body>
 </html>
