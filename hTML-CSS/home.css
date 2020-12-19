@@ -29,7 +29,7 @@ header{
 	height: 50px;
 	width: 50px;
 	margin-right: auto;
-	margin-left: 5px;
+	margin-left: 25px;
 	margin-top: 5px;
 	margin-bottom: 15px;
 }
@@ -62,11 +62,30 @@ header{
 	transition: all 0.3s ease 0s;
 	margin: 20px;
 	color: white;
+	margin-right: 55px;
+	outline: none;
 }
 .contact-btn:hover{
 	background-color: white;
 	color:  #f58634;
 	border: #f58634 1px solid;
+}
+.searchbar {
+	margin: auto;
+	width: 100%;
+	max-width: 350px;
+	float: left;
+	background-color: #f58634;
+	border: none;
+	height: 30px;
+	outline: none;
+	color: white;
+	background: linear-gradient(#f58634, #f58634);
+	opacity: 0.8;
+	border-radius: 15px;
+}
+::placeholder{
+	color: white;
 }
 
 
