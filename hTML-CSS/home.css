@@ -83,6 +83,7 @@ header{
 	background: linear-gradient(#f58634, #f58634);
 	opacity: 0.8;
 	border-radius: 15px;
+	padding-left: 15px;
 }
 ::placeholder{
 	color: white;
