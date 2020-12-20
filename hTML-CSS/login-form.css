@@ -1,17 +1,18 @@
+/* Navigation bar */
 .divHeader{
-	background-color:white;
+	background-color:#1f2b3a;
 }
 body{
 	box-sizing:border-box;
 	margin: 0;
 	padding: 0;
-	background-color: #f58634;
+	background-color: white;
 }
 li, a, .contact-btn {	
 	font-family:  Century Gothic;
 	font-weight: 500;
 	font-size: 16px;
-	color: #f58634;
+	color: white;
 	text-decoration: none;
 }
 header {
@@ -20,6 +21,7 @@ header {
 	align-items: center;
 	padding: 30px, 10%;
 	max-height: 60px;
+	border-bottom: #45A29E 1px solid;
 
 }
 .logo{
@@ -49,15 +51,15 @@ header {
 	transition: all 0.3s ease 0s;
 }
 .nav_links li a:hover{
-	background-color: #f58634;
-	color: white;
-	border: #f58634 1px solid;
+	background-color: white;
+	color:  #45A29E;
+	border: #45A29E 1px solid;
 	border-radius: 50px;
 	padding: 9px 25px;
 }
 .contact-btn {
 	padding: 9px 25px;
-	background-color: #f58634;
+	background-color: #45A29E;
 	border: none;
 	border-radius: 50px;
 	cursor: pointer;
@@ -69,8 +71,7 @@ header {
 }
 .contact-btn:hover{
 	background-color: white;
-	color:  #f58634;
-	border: #f58634 1px solid;
+	color:  #45A29E;
 }
 .hero{
 	margin: 0;
@@ -84,19 +85,22 @@ header {
 }
 .form-box{
 	width: 380px;
-	height: 480px;
+	height: 435px;
 	position: relative;
-	margin: 6% auto;
+	margin: 10% auto;
 	background: #fff;
 	padding: 5px;
 	overflow: hidden;
 	border-radius: 30px;
+	box-shadow: 0 0 20px 9px #b1e0df;
+	border: solid 1px rgb(201, 201, 201);
+	padding-bottom: 10px
 }
 .button-box{
 	width: 220px;
 	margin: 35px auto;
 	position: relative;
-	box-shadow: 0 0 20px 9px #ff61241f;
+	box-shadow: 0 0 20px 9px #d2f1f0;
 	border-radius: 30px;
 }
 .toggle-btn{
@@ -113,7 +117,7 @@ header {
 	position: absolute;
 	width: 110px;
 	height: 100%;
-	background: linear-gradient(to right, #f58634, #be4b07);
+	background: linear-gradient(to right,  #45A29E, #5cc7c3);
 	border-radius: 30px;
 	transition: .5s;
 }
@@ -151,7 +155,7 @@ header {
 	cursor: pointer;
 	display: block;
 	margin: 30px;
-	background: linear-gradient(to right, #f58634, #be4b07);
+	background: linear-gradient(to right,  #45A29E, #5cc7c3);
 	border: 0;
 	outline: none;
 	border-radius: 30px;
@@ -162,45 +166,39 @@ header {
 #register{
 	left: 450px;
 }
+/* Searchbar */
 .searchbar {
 	margin: auto;
 	width: 100%;
 	max-width: 350px;
 	float: left;
-	background-color: #f58634;
+	background-color:  #45A29E;
 	border: none;
 	height: 30px;
 	outline: none;
-	color: white;
-	background: linear-gradient(#f58634, #f58634);
+	color: black;
+	background: linear-gradient( white, white	);
 	opacity: 0.8;
 	border-radius: 15px;
 	padding-left: 15px;
 }
 .searchbar::placeholder{
-	color: white;
+	color: black;
 }
-
-
-
-
-
-
-
-
+/* footer */
 .footer{
 	margin-top: 100px;
 	margin: 0;
 	display: flex;
 	justify-content: space-between;
-	background: white;	
+	background:#1f2b3a;	
 	width:auto;
 	box-sizing: border-box;
 	text-align: left;
 	font-size: 16px;
 	font-weight: 500;
 	padding: 20px 20px;
-	
+	border-top: #45A29E 1px solid;
 	
 }
 .footer .footer-left,
@@ -215,7 +213,6 @@ header {
 	width: 50px;
 
 }
-
 .footer .footer-links {
 	color:#f58634;
 	margin:20px 0 12px;
@@ -226,17 +223,16 @@ header {
 	line-height:1.8;
 	font-weight: 400;
 	text-decoration: none;
-	color:#f58634;
+	color: white;
 	margin-right: 8px;
 }
 .footer .footer-company{
-	color: black;
+	color: white;
 	font-size: 14px;
 	font-weight: normal;
 	margin: 0;
 
 }
-
 .footer-logos{
 	width: 20px;
 	margin: 10px 15px;
@@ -244,7 +240,7 @@ header {
 }
 .footer .footer-center p{
 	display: inline;
-	color: black;
+	color: white;
 	font-weight: normal;
 	vertical-align: middle;
 	margin: 0;
@@ -253,22 +249,21 @@ header {
 	content:"|";
 	font-weight: normal;
 	font-size: 20px;
-	color: #f58634;
+	color:  #45A29E;
 	display: inline-block;
 	padding: 5px;
 	left: 0;
 }
-
 .footer .footer-company-about{
 	line-height: 20px;
-	color: #f58634;
+	color: white;
 	font-size: 14px;
 	font-weight: normal;
 	margin: 0;
 }
 .footer .footer-company-about span{
 	display: block;
-	color: black;
+	color: white;
 	font-size: 14px;
 	font-weight: bold;
 	margin-bottom: 20px;
@@ -279,6 +274,4 @@ header {
 .socials-logo{
 	display: inline;
 	width: 50px;
-
 }
-
