@@ -6,7 +6,7 @@ body{
 	box-sizing:border-box;
 	margin: 0;
 	padding: 0;
-	background-color: #1f2b3a;
+    background-color: #1f2b3a;
 }
 li, a, .contact-btn {	
 	font-family:  Century Gothic;
@@ -240,7 +240,8 @@ img{
 /* product section */
 .products{
     background: white;
-    padding: 50px 0;
+    padding: 20px 0;
+
 }
 .products .text-light{
     text-align: center;
@@ -292,9 +293,10 @@ img{
 }
 .btn-buy:hover{
     background: white;
-    color: #45A29E;
+    color:#45A29E;
     border: 1px solid #45A29E;
 }
+
 .product-info{
     background: #45A29E;
     padding: 32px;
@@ -335,6 +337,8 @@ img{
 .product:hover .product-img{
     background: #45A29E;
 }
+
+
 
 
 
