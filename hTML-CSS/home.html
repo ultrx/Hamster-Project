@@ -24,7 +24,105 @@
             <a class="cta" href="login-form.html"><button class="contact-btn">Log In</button></a>
         </header>
     </div>
-    <section>Body</section>
+
+    <!--- SLIDESHOW -->
+    <div class="slideshow">
+        <div class="img-slider">
+            <div class="slide active">
+                <img src="images/slide1.png">
+                    <div class="info">
+                        <h2>DESIGN</h2>
+                    </div>
+            </div>
+            <div class="slide">
+                <img src="images/slide2.jpg">
+                    <div class="info">
+                        <h2>COMPATIBILITY</h2>
+                    </div>
+            </div>
+            <div class="slide">
+                <img src="images/slide3.jpg">
+                    <div class="info">
+                        <h2>QUALITY</h2>
+                    </div>
+            </div>
+            <div class="slide">
+                <img src="images/slide4.png">
+                    <div class="info">
+                        <h2>ERGONOMIC</h2>
+                    </div>
+            </div>
+            <div class="slide">
+                <img src="images/slide5.jpg">
+                    <div class="info">
+                        <h2>COLORFUL</h2>
+                    </div>
+            </div>
+            <div class="navigation">
+                <div class="btn active"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var slides = document.querySelectorAll('.slide');
+        var btns = document.querySelectorAll('.btn');
+        let currentSlide = 1;
+
+        //Manual Slider
+        var manualNav = function(manual) {
+            slides.forEach((slide) => {
+                slide.classList.remove('active');
+
+                btns.forEach((btn) => {
+                    btn.classList.remove('active');
+                });
+            });
+
+            slides[manual].classList.add('active');
+            btns[manual].classList.add('active');
+        }
+
+        btns.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+                manualNav(i);
+                currentSlide = i;
+            });
+        });
+        
+        //Automatic Slider
+        var repeat = function(activeClass){
+            let active = document.getElementsByClassName('active');
+            let i = 1;
+
+            var repeater = () => {
+                setTimeout(function(){
+                    [...active].forEach((activeSlide) => {
+                        activeSlide.classList.remove('active');
+                    });
+
+                    slides[i].classList.add('active');
+                    btns[i].classList.add('active');
+                    i++;
+
+                    if(slides.length == i){
+                        i =0;
+                    }
+                    if(i >= slides.length){
+                        return;
+                    }
+                    repeater();
+                }, 7000);
+            }
+            repeater();
+
+        }
+        repeat();
+    </script>
+
     <footer class="footer">
         <div class="footer-left">
             <img class="footer-logo" src="images/bardh.png" >
