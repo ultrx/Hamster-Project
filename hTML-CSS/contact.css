@@ -2,6 +2,9 @@
 .divHeader{
 	background-color:#1f2b3a;
 }
+html{
+	background: #1f2b3a;
+	}
 body{
 	box-sizing:border-box;
 	margin: 0;

@@ -116,7 +116,8 @@ section{
 	font-size: 16px;
 	font-weight: 500;
 	padding: 20px 20px;
-	border-top: #45A29E 1px solid;
+    border-top: #45A29E 1px solid;
+    min-height: 100%;
 	
 }
 .footer .footer-left,
@@ -377,7 +378,7 @@ img{
 }
 @media screen and (min-width: 1200px){
     .product-items{
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
     .product{
         margin-right: 1rem;
