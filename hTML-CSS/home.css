@@ -155,7 +155,7 @@ header {
 	transform: translateX(-50%);
 }
 .img-slider .navigation .btn{
-	background: #1f2b3a;
+	background: white;
 	width: 12px;
 	height: 12px;
 	margin: 10px;
