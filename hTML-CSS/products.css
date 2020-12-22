@@ -1,13 +1,19 @@
-/* Navigation bar */
-.divHeader{
-	background-color:#1f2b3a;
-}
-body{
-	box-sizing:border-box;
+* {
 	margin: 0;
 	padding: 0;
-    background-color: #1f2b3a;
-}
+	box-sizing: border-box;
+  }
+  body {
+	font-family: Arial, Helvetica, sans-serif;  
+    position: relative;
+    padding-top:60px;
+	padding-bottom: 200px;
+    min-height: 100vh;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+
+  }
 li, a, .contact-btn {	
 	font-family:  Century Gothic;
 	font-weight: 500;
@@ -20,8 +26,12 @@ header {
 	justify-content: flex-end;
 	align-items: center;
 	padding: 30px, 10%;
-	max-height: 60px;
-	border-bottom: #45A29E 1px solid;
+	height: 60px;
+    border-bottom: #45A29E 1px solid;
+    position: absolute;
+  	top: 0;
+    width: 100%;
+    background: #1f2b3a;
 
 }
 .logo{
@@ -105,20 +115,19 @@ section{
 }
 /* footer */
 .footer{
-	margin-top: 100px;
-	margin: 0;
+	height: 200px;
+	position: absolute;
+  	bottom: 0;
+  	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	background:#1f2b3a;	
-	width:auto;
 	box-sizing: border-box;
 	text-align: left;
 	font-size: 16px;
 	font-weight: 500;
 	padding: 20px 20px;
-    border-top: #45A29E 1px solid;
-    min-height: 100%;
-    
+	border-top: #45A29E 1px solid;
 	
 }
 .footer .footer-left,
@@ -195,14 +204,6 @@ section{
 .socials-logo{
 	display: inline;
 	width: 50px;
-}
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-body{
-    font-family: 'Quicksand', sans-serif;
 }
 
 /* Utility stylings */
