@@ -9,7 +9,9 @@ html,body{
 	margin: 0;
 	padding: 0;
 	background: #45A29E;
-	
+	height: 100%;
+	width: 100%;
+	display: table;
 }
 li, a, .contact-btn {	
 	font-family:  Century Gothic;
@@ -237,6 +239,15 @@ header {
 
 
 /* footer */
+.divfooter{
+	width: 100%;
+	height: 80px;
+	bottom: 0;
+	left:0;
+	margin-top: 250px;
+	margin-bottom: -50px;
+	padding-bottom: 0;
+}
 .footer{
 	margin-top: 100px;
 	margin: 0;
@@ -327,7 +338,6 @@ header {
 	display: inline;
 	width: 50px;
 }
-
 
 /*Products*/
 img{
