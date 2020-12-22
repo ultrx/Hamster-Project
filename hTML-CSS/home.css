@@ -123,11 +123,12 @@ header {
 	clip-path: circle(150% at 0 50%);
 	transition: 2s;
 	transition-property: clip-path;
+	
 }
 .img-slider .slide img{
 	z-index: 1;
-	width: 100%;
 	border-radius: 5px;
+	max-height: 850px;
 }
 .img-slider .slide .info{
 	position: absolute;
