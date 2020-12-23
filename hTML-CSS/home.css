@@ -20,6 +20,9 @@ nav{
 	background: transparent;
 	height: 60px;
 	width: 100%;
+	font-family: Arial, Helvetica, sans-serif;  
+}
+.navbar li a{
 	font-family: Arial, Helvetica, sans-serif; 
 }
 .logo{
@@ -43,10 +46,11 @@ nav ul li a{
 	border-radius: 20px;
 	text-transform: uppercase;
 }
-.atab.active, .atab:hover{
+nav #linav.active, #linav:hover{
 	background: #45A29E;
 	transition: 0.5s;
 }
+
 .checkbtn{
 	font-size: 30px;
 	color: white;
@@ -92,7 +96,7 @@ nav ul li a{
 	nav ul li a{
 		font-size: 20px;
 	}
-	a.active, a:hover{
+	nav #linav.active, #linav:hover{
 		background: none;
 		color: #0082e6;
 	}
