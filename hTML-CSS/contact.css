@@ -5,6 +5,10 @@
 	list-style: none;
 	text-decoration: none;
 }
+html{
+
+	background: #1f2b3a;
+}
 body {
 	font-family: Arial, Helvetica, sans-serif; 
     background-color: #f1f1f1;
