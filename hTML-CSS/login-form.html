@@ -6,31 +6,35 @@
     <meta http-equiv="X-UA-Compatibel" content="IE=edge">
     <title>Hamster Store - Log In</title>
     <meta name="description" content="">
-    <link rel="stylesheet" href="login-form.css">      
+    <link rel="stylesheet" href="login-form.css">   
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>     
 </head>
 <body>
-    <div class="divHeader">
-        <header>  
-            <a href="home.html" class="logo"><img class="logo" src="images/bardh.png" onmouseover="this.src='images/blue.png'" onmouseout="this.src='images/bardh.png'"/></a>
-            <input class="searchbar" type="text" placeholder="Search..">
-            <nav>
-                <ul class="nav_links">
-                    <li><a href="home.html">HOME</a></li>
-                    <li><a href="products.html">PRODUCTS</a></li>   
-                    <li><a href="contact.html">CONTACT</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                </ul>
-            </nav>
-            <a class="cta" href="login-form.html"><button class="contact-btn">Log In</button></a>
-        </header>
-    </div>
+    <nav class="navbar">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">
+            <a href="home.html">
+                <img class="logo" src="images/bardh.png" onmouseover="this.src='images/blue.png'" onmouseout="this.src='images/bardh.png'"/>
+            </a>
+        </label>
+        <ul>
+            <li><a class="atab" href="home.html">HOME</a></li>
+            <li><a class="atab" href="products.html">PRODUCTS</a></li>
+            <li><a class="atab" href="contact.html">CONTACT</a></li>
+            <li><a class="atab" href="about.html">ABOUT</a></li>
+            <li><a class="atab" href="login-form.html">LOG IN</a></li>
+        </ul>
+    </nav>
     <main>
     <div class="hero">
         <div class="form-box">
             <div class="button-box">
                 <div id="btn"></div>
-                <button id="login-btn" type="button" class="toggle-btn" onclick="login()">Log In</button>
-                <button id="register-btn" type="button" class="toggle-btn" onclick="register()">Register</button>
+                <button id="login-btn" type="button" class="toggle-btn" onclick="login()">Login</button>
+                <button id="register-btn" type="button" class="toggle-btn" onclick="register()" style="margin-left: 5px;">Register</button>
             </div>
             <div class="social-icons">
                 <a href="https://www.instagram.com/florian.alshiqi" target="_blank"><img src="images/fb.png"></a>
@@ -38,15 +42,15 @@
                 <a href="https://www.instagram.com/kushtrim_ib" target="_blank"><img src="images/gp.png"></a>
             </div>
             <form id="login" name="myform" method="post" onsubmit="return validateform()" class="input-group"> 
-                <input type="text" id="name" class="input-field" placeholder="User" name="name" required>
+                <input type="text" id="name" class="input-field" placeholder="Username" name="name" required>
                 <input type="password" id="password" class="input-field" placeholder="Password" name="password" required>
                 <button type="submit" class="submit-btn" style="color:white;" onclick="return validateform()">Log In</button>
             </form>
             <form id="register" name="myformRegister" method="post" onsubmit="return validateformRegister()" class="input-group">
-                <input type="text" id="name" class="input-field" placeholder="User" name="name" required>
+                <input type="text" id="name" class="input-field" placeholder="Username" name="name" required>
                 <input type="email" id="email" class="input-field" placeholder="Email" name="email" required>
                 <input type="password" id="password" class="input-field" placeholder="Password" name="password" required>
-                <button type="submit" class="submit-btn" style="color:white;" onclick="return validateformRegister()" >Register</button>
+                <button type="submit" class="submit-btn" style="color:white;" onclick="return validateformRegister()">Register</button>
             </form>
         </div>
     </div>
@@ -69,7 +73,7 @@
             var name=document.myform.name.value;  
             var password=document.myform.password.value;  
             if (name==null || name==""){  
-                alert("Name can't be blank");  
+                alert("Username can't be blank");  
                 return false;  
             }
             if(password.length<6){  
@@ -82,7 +86,7 @@
             var email=document.myformRegister.email.value; 
             var password=document.myformRegister.password.value; 
             if(name==null || name==""){  
-                alert("Name can't be blank");  
+                alert("Username can't be blank");  
                 return false;  
             }
             if(!(email.endsWith(".com") || email.includes("@"))){  

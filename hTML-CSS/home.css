@@ -7,16 +7,17 @@
 }
 body {
 	font-family: Arial, Helvetica, sans-serif; 
-	background-color: #f1f1f1;
+    background-color: #f1f1f1;
+    background-image: url("images/loginbg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
 	position: relative;
 	padding-bottom: 200px;
 	min-height: 100vh;
 }
-
 /* NavBar */
-
 nav{
-	background: #1f2b3a;
+	background: transparent;
 	height: 60px;
 	width: 100%;
 	font-family: Arial, Helvetica, sans-serif; 
@@ -24,7 +25,7 @@ nav{
 .logo{
 	height: 55px;
 	width: 55px;
-	margin-left: 25px;
+	margin: 5px 10px;
 }
 nav ul{
 	float: right;
@@ -96,9 +97,12 @@ nav ul li a{
 		color: #0082e6;
 	}
 	#check:checked ~ ul{
+		position: fixed;
 		left: 0;
 		top: 60px;
+		position: absolute;
 		width: 100%;
+		z-index: +9;
 	}
 }
 
@@ -169,27 +173,6 @@ header {
 	color:  #45A29E;
 }
 */
-
-/* Searchbar */
-.searchbar {
-	margin: auto;
-	width: 100%;
-	max-width: 350px;
-	float: left;
-	background-color:  #45A29E;
-	border: none;
-	height: 30px;
-	outline: none;
-	color: black;
-	background: linear-gradient( white, white);
-	opacity: 0.8;
-	border-radius: 15px;
-	padding-left: 15px;
-}
-.searchbar::placeholder{
-	color: black;
-}
-
 /* slideshow */
 .slideshow{
 	max-height: 1000px;

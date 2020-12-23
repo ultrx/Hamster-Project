@@ -7,27 +7,31 @@
     <title>Hamster Store - Products</title>
     <meta name="description" content="">
     <link rel="stylesheet" href="products.css">      
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>  
 </head>
 <body>
-    <div class="divHeader">
-        <header>  
-            <a href="home.html" class="logo"><img class="logo" src="images/bardh.png" onmouseover="this.src='images/blue.png'" onmouseout="this.src='images/bardh.png'"/></a>
-            <input class="searchbar" type="text" placeholder="Search..">
-            <nav>
-                <ul class="nav_links">
-                    <li><a href="home.html">HOME</a></li>
-                    <li><a href="products.html">PRODUCTS</a></li>   
-                    <li><a href="contact.html">CONTACT</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                </ul>
-            </nav>
-            <a class="cta" href="login-form.html"><button class="contact-btn">Log In</button></a>
-        </header>
-    </div>
+    <nav class="navbar">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">
+            <a href="home.html">
+                <img class="logo" src="images/bardh.png" onmouseover="this.src='images/blue.png'" onmouseout="this.src='images/bardh.png'"/>
+            </a>
+        </label>
+        <ul>
+            <li><a class="atab" href="home.html">HOME</a></li>
+            <li><a class="atab" href="products.html">PRODUCTS</a></li>
+            <li><a class="atab" href="contact.html">CONTACT</a></li>
+            <li><a class="atab" href="about.html">ABOUT</a></li>
+            <li><a class="atab" href="login-form.html">LOG IN</a></li>
+        </ul>
+    </nav>
     <main>
         <div class = "products">
             <div class = "container">
-                <h1 class = "lg-title">Gaming Mouses</h1>
+                <h1 class = "lg-title">GAMING MOUSES</h1>
                 <p class = "text-light">As the brand that practically invented the gaming mouse category, we know a thing or two about what it takes to make a deadly-accurate, high-performance gaming mouse—and we’re constantly upping our game to raise yours. Whether you’re looking for a wired or wireless mouse, one specialized for FPS or MOBA, or a design suited for your mouse grip, our extensive arsenal of gaming mice has something for every gamer. The question is: which one will you choose?</p>
                 <div class = "product-items">
                     <!-- single product -->
@@ -106,11 +110,11 @@
                         </div>
                     </div>
                 </div>
-                </div>
+            </div>
         </div>
         <div class = "products">
             <div class = "container">
-                <h1 class = "lg-title">Gaming Keyboard</h1>
+                <h1 class = "lg-title">GAMING KEYBARDS</h1>
                 <p class = "text-light">From multi-award winning Razer™ Mechanical Switches designed specifically for gaming to a mecha-membrane hybrid, discover the gaming keyboard for you—equipped with speed, precision and your preferred typing experience.</p>
                 <div class = "product-items">
                     <!-- single product -->
@@ -127,7 +131,7 @@
                         <div class = "product-info">
                             <div class = "product-info-top">
                             </div>
-                            <a href = "https://www.razer.com/gaming-keyboards/Razer-BlackWidow-V3/RZ03-03540100-R3M1"target="_blank" class = "product-name">Razer BlackWidow V3</a>
+                            <a href = "https://www.razer.com/gaming-keyboards/Razer-BlackWidow-V3/RZ03-03540100-R3M1"target="_blank" class = "product-name">Razer BlackWidow</a>
                             <p class = "product-price">$ 200.00</p>
                             <p class = "product-price">$ 139.99</p>
                         </div>
@@ -147,7 +151,7 @@
                         <div class = "product-info">
                             <div class = "product-info-top">
                             </div>
-                            <a href = "https://www.razer.com/gaming-keyboards/Razer-Huntsman-Mini/RZ03-03390100-R3M1"target="_blank" class = "product-name">Razer Huntsman Mini</a>
+                            <a href = "https://www.razer.com/gaming-keyboards/Razer-Huntsman-Mini/RZ03-03390100-R3M1"target="_blank" class = "product-name">Razer Huntsman V2</a>
                             <p class = "product-price">$ 149.99</p>
                             <p class = "product-price">$ 129.99</p>
                         </div>
@@ -193,7 +197,7 @@
         </div>
         <div class = "products">
             <div class = "container">
-                <h1 class = "lg-title">Gaming HeadSet</h1>
+                <h1 class = "lg-title">GAMING HEADSETS</h1>
                 <p class = "text-light">With our lethal line-up of advanced headsets and speakers, experience clear, powerful audio that builds incredible soundscapes for a new level of immersion, and gain the competitive edge with next-gen surround sound.</p>
                 <div class = "product-items">
                     <!-- single product -->
@@ -266,13 +270,13 @@
                         <div class = "product-info">
                             <div class = "product-info-top">
                             </div>
-                            <a href = "https://www.razer.com/mobile-headsets/Razer-Kraken-BT-Kitty-Edition/RZ04-03520100-R3U1"target="_blank" class = "product-name">Razer Kraken BT Kitty</a>
+                            <a href = "https://www.razer.com/mobile-headsets/Razer-Kraken-BT-Kitty-Edition/RZ04-03520100-R3U1"target="_blank" class = "product-name">Razer Kraken Kitty</a>
                             <p class = "product-price">$ 139.99</p>
                             <p class = "product-price">$ 99.99</p>
                         </div>
                     </div>
                 </div>
-                </div>
+            </div>
         </div>
     </main>
     <footer class="footer">
@@ -310,10 +314,8 @@
                 <a href="https://www.instagram.com/florian.alshiqi" target="_blank"><img class="socials-logo" src="images/fb.png"></a>
                 <a href="https://www.instagram.com/edon.krasniiqi" target="_blank"><img class="socials-logo" src="images/tw.png"></a>
                 <a href="https://www.instagram.com/kushtrim_ib" target="_blank"><img class="socials-logo" src="images/gp.png"></a>
-            </div>
-            
+            </div>    
         </div>
-
     </footer>  
 </body>
 </html> 

@@ -1,117 +1,109 @@
-* {
+*{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-  }
-  body {
-	font-family: Arial, Helvetica, sans-serif;  
-    position: relative;
-    padding-top:60px;
-	padding-bottom: 200px;
-    min-height: 100vh;
-    flex-direction: column;
-    display: flex;
-    justify-content: center;
-
-  }
-li, a, .contact-btn {	
-	font-family:  Century Gothic;
-	font-weight: 500;
-	font-size: 16px;
-	color: white;
+	list-style: none;
 	text-decoration: none;
 }
-header {
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	padding: 30px, 10%;
+body {
+	font-family: Arial, Helvetica, sans-serif; 
+    background-color: #f1f1f1;
+    background-image: url("images/loginbg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	padding-bottom: 200px;
+	min-height: 100vh;
+}
+/* NavBar */
+nav{
+	background: transparent;
 	height: 60px;
-    border-bottom: #45A29E 1px solid;
-    position: absolute;
-  	top: 0;
-    width: 100%;
-    background: #1f2b3a;
-
+	width: 100%;
+	font-family: Arial, Helvetica, sans-serif; 
 }
 .logo{
-	cursor: pointer;
-	height: 50px;
-	width: 50px;
-	margin-right: auto;
-	margin-left: 25px;
-	margin-top: 5px;
-	margin-bottom: 15px;
+	height: 55px;
+	width: 55px;
+	margin: 5px 10px;
 }
-.logo:a{
-	margin: 0;
-	padding: 0;
+nav ul{
+	float: right;
+	margin-right: 20px;
 }
-.logo:hover {
-	background: url("images/hover.png") no-repeat;
-}
-.nav_links{
-	list-style: none;
-}
-.nav_links li{
+nav ul li{
 	display: inline-block;
-	padding: 0px 20px;
+	line-height: 60px;
+	margin: 0 5px;
 }
-.nav_links li a {
-	transition: all 0.3s ease 0s;
+nav ul li a{
+	color: white;
+	font-size: 17px;
+	padding: 7px 13px;
+	border-radius: 20px;
+	text-transform: uppercase;
 }
-.nav_links li a:hover{
-	background-color: white;
-	color:  #45A29E;
-	border: #45A29E 1px solid;
-	border-radius: 50px;
-	padding: 9px 25px;
+.atab.active, .atab:hover{
+	background: #45A29E;
+	transition: 0.5s;
 }
-.contact-btn {
-	padding: 9px 25px;
-	background-color: #45A29E;
-	border: none;
-	border-radius: 50px;
+.checkbtn{
+	font-size: 30px;
+	color: white;
+	float: right;
+	line-height: 60px;
+	margin-right: 40px;
 	cursor: pointer;
-	transition: all 0.3s ease 0s;
-	margin: 20px;
-	color: white;
-	margin-right: 55px;
-	outline: none;
+	display: none;
+	z-index: 10;
 }
-.contact-btn:hover{
-	background-color: white;
-	color:  #45A29E;
+.checkbtn.active{
+	margin-top: 0;
+	z-index: 10;
+	position: absolute;
 }
-/* Searchbar */
-.searchbar {
-	margin: auto;
-	width: 100%;
-	max-width: 350px;
-	float: left;
-	background-color:  #45A29E;
-	border: none;
-	height: 30px;
-	outline: none;
-	color: black;
-	background: linear-gradient( white, white);
-	opacity: 0.8;
-	border-radius: 15px;
-	padding-left: 15px;
+#check{
+	display: none;
 }
-.searchbar::placeholder{
-	color: black;
+@media(max-width: 952px){
+	nav ul li a{
+		font-size: 16px;
+	}
 }
-section{
-	width: 100%;
-	background: #fff;
-	display: inline-block;
-	height: 100vh;
-	text-align: center;
-	font-size: 36px;
-	color: white;
-	font-weight:700 ;
-	margin: 0;
+@media(max-width: 858px){
+	.checkbtn{
+		display: block;
+	}
+	ul{
+		position: fixed;
+		width: 100%;
+		height: 722px;
+		background: #2c3e50;
+		top: 80px;
+		left: -100%;
+		text-align: center;
+		transition: all 0.5s;
+	}
+	nav ul li{
+		display: block;
+		margin: 50px 0;
+		line-height: 30px;
+	}
+	nav ul li a{
+		font-size: 20px;
+	}
+	a.active, a:hover{
+		background: none;
+		color: #0082e6;
+	}
+	#check:checked ~ ul{
+		position: fixed;
+		left: 0;
+		top: 60px;
+		position: absolute;
+		width: 100%;
+		z-index: +9;
+	}
 }
 /* footer */
 .footer{
@@ -242,7 +234,7 @@ img{
 }
 /* product section */
 .products{
-    background: white;
+    background: transparent;
     padding: 20px 0;
 
 }
@@ -340,11 +332,6 @@ img{
 .product:hover .product-img{
     background: #45A29E;
 }
-
-
-
-
-
 /* product collection */
 .product-collection{
     padding: 51px 0;
@@ -366,8 +353,7 @@ img{
     font-weight: 400;
     line-height: 1.7;
 }
-
-/* Media Queries */
+/* Product Media Queries */
 @media screen and (min-width: 992px){
     .product-items{
         display: grid;
