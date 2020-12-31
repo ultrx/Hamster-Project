@@ -396,3 +396,59 @@ img{
         height: 121.5vh;
     }
 }
+@media(max-width: 375px){
+	.footer{
+		height: 450px;
+		position: absolute;
+		  bottom: 0;
+		  width: 100%;
+		  display: block;
+		  justify-content: center;
+		background:#1f2b3a;	
+		box-sizing: border-box;
+		text-align: left;
+		font-size: 16px;
+		font-weight: 500;
+		padding: 20px 20px;
+		border-top: #45A29E 1px solid;
+		
+	}
+	body{
+		font-family: Arial, Helvetica, sans-serif; 
+		background-color: #f1f1f1;
+		background-image: url("images/loginbg.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+		padding-bottom: 500px;
+		min-height: 100vh;
+	}
+}
+@media(max-width: 970px){
+	.footer{
+		height: 200px;
+		position: absolute;
+		  bottom: 0;
+		  width: 100%;
+		  display: block;
+		  justify-content: center;
+		background:#1f2b3a;	
+		box-sizing: border-box;
+		text-align: left;
+		font-size: 16px;
+		font-weight: 500;
+		padding: 20px 20px;
+		border-top: #45A29E 1px solid;
+		
+	}
+	body{
+		font-family: Arial, Helvetica, sans-serif; 
+		background-color: #f1f1f1;
+		background-image: url("images/loginbg.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+		padding-bottom: 500px;
+		min-height: 100vh;
+	}
+}
