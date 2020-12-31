@@ -43,7 +43,7 @@ nav ul li a{
 	border-radius: 20px;
 	text-transform: uppercase;
 }
-nav #linav.active, #linav:hover{
+nav #linav.activenav, #linav:hover{
 	background: #45A29E;
 	transition: 0.5s;
 }
@@ -92,7 +92,7 @@ nav #linav.active, #linav:hover{
 	nav ul li a{
 		font-size: 20px;
 	}
-	nav #linav.active, #linav:hover{
+	nav #linav.activenav, #linav:hover{
 		background: none;
 		color: #0082e6;
 	}

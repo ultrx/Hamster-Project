@@ -7,7 +7,7 @@
     <title>Hamster Store</title>
     <meta name="description" content="">
     <link rel="stylesheet" href="home.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>   
+ 
 </head>
 <body>
     <!---NavBar-->
@@ -22,7 +22,7 @@
             </a>
         </label>
         <ul>
-            <li><a id="linav" class="active" href="home.html">HOME</a></li>
+            <li><a id="linav" class="activenav" href="home.html">HOME</a></li>
             <li><a id="linav" href="products.html">PRODUCTS</a></li>
             <li><a id="linav" href="contact.html">CONTACT</a></li>
             <li><a id="linav" href="about.html">ABOUT</a></li>
@@ -30,48 +30,51 @@
         </ul>
     </nav>
     <main>
-    <!--- SLIDESHOW -->
-    <div class="slideshow">
-        <div class="img-slider">
-            <div class="slide active">
-                <img src="images/slide1.png">
-                    <div class="info">
-                        <h2>DESIGN</h2>
-                    </div>
+        <!--Slideshow-->
+        <div class="slider">
+            <div class="myslider fade" style="display: block;">
+                <div class="txt">
+                    <h1>DESIGN</h1>
+                </div>
+                <img src="images/slide1.png" style="width: 100%; height: 100%;">
             </div>
-            <div class="slide">
-                <img src="images/slide2.jpg">
-                    <div class="info">
-                        <h2>COMPATIBILITY</h2>
-                    </div>
+            <div class="myslider fade">
+                <div class="txt">
+                    <h1>COMPATIBILITY</h1>
+                </div>
+                <img src="images/slide2.jpg" style="width: 100%; height: 100%;">
             </div>
-            <div class="slide">
-                <img src="images/slide3.jpg">
-                    <div class="info">
-                        <h2>QUALITY</h2>
-                    </div>
+            <div class="myslider fade">
+                <div class="txt">
+                    <h1>QUALITY</h1>
+                </div>
+                <img src="images/slide3.jpg" style="width: 100%; height: 100%;">
             </div>
-            <div class="slide">
-                <img src="images/slide4.png">
-                    <div class="info">
-                        <h2>ERGONOMIC</h2>
-                    </div>
+            <div class="myslider fade">
+                <div class="txt">
+                    <h1>ERGONOMIC</h1>
+                </div>
+                <img src="images/slide4.png" style="width: 100%; height: 100%;">
             </div>
-            <div class="slide">
-                <img src="images/slide5.jpg">
-                    <div class="info">
-                        <h2>COLORFUL</h2>
-                    </div>
+            <div class="myslider fade">
+                <div class="txt">
+                    <h1>COLORFUL</h1>
+                </div>
+                <img src="images/slide5.jpg" style="width: 100%; height: 100%;">
             </div>
-            <div class="navigation">
-                <div class="btn active"></div>
-                <div class="btn"></div>
-                <div class="btn"></div>
-                <div class="btn"></div>
-                <div class="btn"></div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <div class="dotsbox" style="text-align: center;">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
             </div>
+
         </div>
-    </div>
 
    <!--Products-->
    <div class = "products">
@@ -120,56 +123,53 @@
             </div>
         </div>
     </div>
+
+
     <script type="text/javascript">
-        var slides = document.querySelectorAll('.slide');
-        var btns = document.querySelectorAll('.btn');
-        let currentSlide = 1;
-        //Manual Slider
-        var manualNav = function(manual) {
-            slides.forEach((slide) => {
-                slide.classList.remove('active');
+        const myslide = document.querySelectorAll('.myslider');
+            dot = document.querySelectorAll('.dot');
 
-                btns.forEach((btn) => {
-                    btn.classList.remove('active');
-                });
-            });
+        let counter = 1;
+        slidefun(counter);
 
-            slides[manual].classList.add('active');
-            btns[manual].classList.add('active');
+        let timer = setInterval(autoslide, 5000);
+        function autoslide() { 
+            counter += 1;
+            slidefun(counter);
         }
-        btns.forEach((btn, i) => {
-            btn.addEventListener("click", () => {
-                manualNav(i);
-                currentSlide = i;
-            });
-        });
-        //Automatic Slider
-        var repeat = function(activeClass){
-            let active = document.getElementsByClassName('active');
-            let i = 1;
+        function plusSlides(n){
+            counter += n;
+            slidefun(counter);
+            resetTimer();
+        }
+        function currentSlide(n) {
+            counter = n;
+            slidefun(counter);
+            resetTimer();
+        }
+        function resetTimer() {
+            clearInterval(timer);
+            timer = setInterval(autoslide, 5000);
+        }
 
-            var repeater = () => {
-                setTimeout(function(){
-                    [...active].forEach((activeSlide) => {
-                        activeSlide.classList.remove('active');
-                    });
-
-                    slides[i].classList.add('active');
-                    btns[i].classList.add('active');
-                    i++;
-
-                    if(slides.length == i){
-                        i =0;
-                    }
-                    if(i >= slides.length){
-                        return;
-                    }
-                    repeater();
-                }, 7000);
+        function slidefun(n) {
+            let i;
+            for(i = 0; i<myslide.length; i++){
+                myslide[i].style.display = "none";
             }
-            repeater();
+            for(i=0;i<dot.length; i++){
+                dot[i].classList.remove('active');
+            }
+            if(n > myslide.length){
+                counter = 1;
+            }
+            if(n < 1){
+                counter = myslide.length;
+            }
+            myslide[counter - 1].style.display = "block";
+            dot[counter - 1].classList.add('active');
         }
-        repeat();
+
     </script>
     </main>
     <footer class="footer">
