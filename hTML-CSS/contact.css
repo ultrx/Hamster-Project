@@ -6,13 +6,13 @@
 	text-decoration: none;
 }
 html{
-
 	background: #1f2b3a;
 }
 body {
 	font-family: Arial, Helvetica, sans-serif; 
     background-color: #f1f1f1;
-    background-image: url("images/loginbg.jpg");
+    /* background-image: url("images/loginbg.jpg"); */
+    background-color: #243346; 
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
@@ -21,14 +21,15 @@ body {
 }
 /* NavBar */
 nav{
-	background: transparent;
+	background: #1f2b3a;
 	height: 60px;
 	width: 100%;
 	font-family: Arial, Helvetica, sans-serif; 
+	border-bottom: 1px solid #45A29E;
 }
 .logo{
-	height: 55px;
-	width: 55px;
+	height: 50px;
+	width: 50px;
 	margin: 5px 10px;
 }
 nav ul{
@@ -120,26 +121,24 @@ input[type=text], select, textarea{
     resize: vertical;
 }
 input[type=submit]{
-    background-color:  #1f2b3a;
+	background-color:  #45A29E;
     color: white;
     padding: 12px 20px;
     border: none;
     border-radius: 30px;
 	cursor: pointer;
 	outline: none;
-  }
-  
+} 
 input[type=submit]:hover{
     background-color:#45A29E;
-  }
-  
+} 
 .container{
     border-radius: 5px;
-    background-color: transparent;
+    background-color: #1f2b3a;
     padding: 20px;
     margin: 5% 5%;
-	border: 2px solid #1f2b3a;
-	color:#1f2b3a;
+	border: 1px solid #45A29E;
+	color: white;
 }
 /* footer */
 .footer{
@@ -237,10 +236,10 @@ input[type=submit]:hover{
 	.footer{
 		height: 450px;
 		position: absolute;
-		  bottom: 0;
-		  width: 100%;
-		  display: block;
-		  justify-content: center;
+		bottom: 0;
+		width: 100%;
+		display: block;
+		justify-content: center;
 		background:#1f2b3a;	
 		box-sizing: border-box;
 		text-align: left;
@@ -252,10 +251,6 @@ input[type=submit]:hover{
 	}
 	body{
 		font-family: Arial, Helvetica, sans-serif; 
-		background-color: #f1f1f1;
-		background-image: url("images/loginbg.jpg");
-		background-repeat: no-repeat;
-		background-size: cover;
 		position: relative;
 		padding-bottom: 500px;
 		min-height: 100vh;
@@ -265,10 +260,10 @@ input[type=submit]:hover{
 	.footer{
 		height: 200px;
 		position: absolute;
-		  bottom: 0;
-		  width: 100%;
-		  display: block;
-		  justify-content: center;
+		bottom: 0;
+		width: 100%;
+		display: block;
+		justify-content: center;
 		background:#1f2b3a;	
 		box-sizing: border-box;
 		text-align: left;
@@ -280,10 +275,6 @@ input[type=submit]:hover{
 	}
 	body{
 		font-family: Arial, Helvetica, sans-serif; 
-		background-color: #f1f1f1;
-		background-image: url("images/loginbg.jpg");
-		background-repeat: no-repeat;
-		background-size: cover;
 		position: relative;
 		padding-bottom: 500px;
 		min-height: 100vh;
