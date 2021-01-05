@@ -99,7 +99,7 @@ nav #linav.activenav, #linav:hover{
 	}
 	nav #linav.activenav, #linav:hover{
 		background: none;
-		color: #0082e6;
+		color: #45A29E;
 	}
 	#check:checked ~ ul{
 		position: fixed;
