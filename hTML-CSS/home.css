@@ -123,7 +123,7 @@ nav #linav.activenav, #linav:hover{
 	margin-top: 1%;
 }
 .myslider{
-	height: 600px;
+	height: auto;
 	display: none;
 	overflow: hidden;
 }
@@ -203,19 +203,19 @@ nav #linav.activenav, #linav:hover{
 	font-weight: bold;
 }
 .slider img{
-	transform: scale(1.5, 1.5);
+	transform: scale(1, 1);
 	-webkit-animation-name: zoomin;
 	-webkit-animation-duration: 40s;
 	animation-name: zoomin;
 	animation-duration: 40s;
 }
 @-webkit-keyframes zoomin {
-	from{transform: scale(1.5, 1.5);}
-	to{transform: scale(1.5, 1.5);}
+	from{transform: scale(1, 1);}
+	to{transform: scale(1, 1);}
 }
 @keyframes zoomin {
 	from{transform: scale(1.01, 1.01);}
-	to{transform: scale(1.5, 1.5);}
+	to{transform: scale(1, 1);}
 }
 @media screen and (max-width: 880px) {
 	.myslider{
