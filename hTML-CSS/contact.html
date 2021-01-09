@@ -30,22 +30,46 @@
     </nav>
     <main>
         <div class="container">
-            <form action="/action_page.php">
+            <form id="myform" name="validation"  onsubmit="return validationonSubmit()" >
               <label for="fname">First Name</label>
-              <input type="text" id="fname" name="firstname" placeholder="First name">
+              <input type="text" id="fname" name="firstname" placeholder="First name" required>
           
               <label for="lname">Last Name</label>
-              <input type="text" id="lname" name="lastname" placeholder="Last name">
+              <input type="text" id="lname" name="lastname" placeholder="Last name"required >
           
               <label for="lname">E-mail</label>
-              <input type="text" id="email" name="lastname" placeholder="Email">
+              <input type="text" id="email" name="email" placeholder="Email" required>
           
               <label for="subject">Subject</label>
-              <textarea id="subject" name="subject" placeholder="Write something..." style="height:200px"></textarea>
+              <textarea id="subject" name="subject" placeholder="Write something..." style="height:200px" required></textarea>
           
-              <a href="home.html"><input type="submit" value="Submit"></a>
+              <a href="home.html"><input type="submit" value="Submit" onclick="return validationonSubmit()"> </a>
             </form>
           </div>
+          <script>
+              function validationonSubmit(){  
+            var firstname=document.validation.firstname.value;  
+            var lastname=document.validation.lastname.value; 
+            var email=document.validation.email.value; 
+            var subject=document.validation.subject.value;  
+            if(firstname==null || firstname==""){  
+                alert("Name can't be blank");  
+                return false;  
+            }
+            if(lastname==null || lastname==""){
+                alert("Lastname can't be blank");
+                return false;
+            }
+            if(!(email.endsWith(".com") || email.includes("@"))){  
+                alert("Please enter a valid e-mail address.");  
+                return false;  
+            } 
+            if(subject==null || subject==""){
+                alert("Please add a subject");
+                return false;
+            } 
+              }
+    </script>
     </main>
     <footer class="footer">
         <div class="footer-left">
@@ -86,4 +110,4 @@
         </div>
     </footer>  
 </body>
-</html> 
+</html>
