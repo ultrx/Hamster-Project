@@ -1,3 +1,8 @@
+<?php require 'config/dbconnect.php';
+$query = $pdo->query('SELECT * from homeproducts LIMIT 3');
+$homeproducts = $query->fetchAll();
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -69,51 +74,24 @@
             <h1 class = "lg-title">Our Products</h1>
             <p class = "text-light">We offer you the best parts for Gaming</p>
             <div class = "home-product-items">
+            <?php foreach($homeproducts as $product): ?>
 
                 <!-- Single Product -->
                 <div class = "product">
-                        <div class = "product-content">
-                            <div class = "product-img">
-                                <a href="products.html"><img src = "images/mouse3.png" alt = "product image"></a>
-                            </div>
-                        </div>
-                        <div class = "product-info">
-                            <div class = "product-info-top">
-                            </div>
-                            <a href = "products.html" class = "product-name">Mouses</a>
+                    <div class = "product-content">
+                        <div class = "product-img">
+                                <a href="products.php"><img src = "images/<?php echo $product['image']; ?>" alt = "product image"></a>
                         </div>
                     </div>
-                    <!--End of Single Product -->
-
-                    <!-- Single Product -->
-                    <div class = "product">
-                        <div class = "product-content">
-                            <div class = "product-img">
-                                <a href="products.html"><img src = "images/keyboard1.png" alt = "product image"></a>
-                            </div>
+                    <div class = "product-info">
+                        <div class = "product-info-top">
                         </div>
-                        <div class = "product-info">
-                            <div class = "product-info-top">
-                            </div>
-                            <a href = "products.html" class = "product-name">Keyboards</a>
-                        </div>
+                            <a href = "products.php" class = "product-name"><?php echo $product['name']; ?></a>
                     </div>
+                </div>
                     <!--End of Single Product -->
-
-                    <!-- Single Product -->
-                    <div class = "product">
-                        <div class = "product-content">
-                            <div class = "product-img">
-                                <a href="products.html"><img src = "images/heatset3.png" alt = "product image"></a>
-                            </div>
-                        </div>
-                        <div class = "product-info">
-                            <div class = "product-info-top">
-                            </div>
-                            <a href ="products.html" class = "product-name">HeadSet</a>
-                        </div>
-                    </div>
-                    <!--End of Single Product -->
+                    
+            <?php endforeach; ?>
         </div>
     </div>
     <!--End of Products-->

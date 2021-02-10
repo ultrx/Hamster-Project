@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +18,7 @@
 
     <main>
 
-        <!--Product Section-->
+        <!--Product Section Mouses-->
         <div class = "products">
             <div class = "products-container">
                 <h1 class = "lg-title">GAMING MOUSES</h1>
@@ -38,7 +39,7 @@
                         <div class = "product-info">
                             <div class = "product-info-top">
                             </div>
-                            <a href = "https://www.razer.com/gaming-mice/Razer-DeathAdder-V2/RZ01-03210400-R3M1"target="_blank" class = "product-name">Razer x *A Bathing Ape® V2 Pro</a>
+                            <a href = "https://www.razer.com/gaming-mice/Razer-DeathAdder-V2/RZ01-03210400-R3M1"target="_blank" class = "product-name">Razer x *A Bathing Ape®</a>
                             <p class = "product-price">$ 100.00</p>
                             <p class = "product-price">$ 89.99</p>
                         </div>
@@ -100,7 +101,7 @@
                         <div class = "product-info">
                             <div class = "product-info-top">
                             </div>
-                            <a href = "https://www.razer.com/gaming-mice/Razer-DeathAdder-Essential/RZ01-02540100-R3U1"target="_blank" class = "product-name">Razer DeathAdder Essential</a>
+                            <a href = "https://www.razer.com/gaming-mice/Razer-DeathAdder-Essential/RZ01-02540100-R3U1"target="_blank" class = "product-name">Razer DeathAdder</a>
                             <p class = "product-price">$ 69.99</p>
                             <p class = "product-price">$ 49.99</p>
                         </div>
@@ -112,7 +113,7 @@
         </div>
         <!--End of Product Section-->
 
-        <!--Product Section-->
+        <!--Product Section Keyboards-->
         <div class = "products">
             <div class = "products-container">
                 <h1 class = "lg-title">GAMING KEYBOARDS</h1>
@@ -205,7 +206,7 @@
         </div>
         <!--End of Product Section-->
 
-        <!--Product Section-->
+        <!--Product Section HeadSet-->
         <div class = "products">
             <div class = "products-container">
                 <h1 class = "lg-title">GAMING HEADSETS</h1>
