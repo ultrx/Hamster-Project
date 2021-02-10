@@ -1,8 +1,11 @@
 <?php
-try{
-    $pdo = new PDO("mysql:host=localhost;dbname=hamster","root","");
-}catch(PDOException $pdo){
-    die("Lidhja me DB - Deshtoi!");
-}
+$dbhost = 'localhost';
+$username = 'root';
+$password = '';
+$dbname = "hamster";
 
+if(!$con = mysqli_connect($dbhost, $username, $password, $dbname)){
+
+    die("Failed to connect with database");
+}
 ?>

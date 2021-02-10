@@ -1,6 +1,6 @@
 <?php require 'config/dbconnect.php';
-$query = $pdo->query('SELECT * from homeproducts LIMIT 3');
-$homeproducts = $query->fetchAll();
+$query = "SELECT * from homeproducts";
+$result = mysqli_query($con,$query);
 
 ?>
 <!DOCTYPE html>
@@ -74,7 +74,7 @@ $homeproducts = $query->fetchAll();
             <h1 class = "lg-title">Our Products</h1>
             <p class = "text-light">We offer you the best parts for Gaming</p>
             <div class = "home-product-items">
-            <?php foreach($homeproducts as $product): ?>
+            <?php foreach($result as $product): ?>
 
                 <!-- Single Product -->
                 <div class = "product">
