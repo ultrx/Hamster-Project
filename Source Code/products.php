@@ -1,11 +1,13 @@
-<?php require 'config/dbconnect.php';
+<?php 
+session_start();
+    $_SESSION;
+require 'config/dbconnect.php';
 $query = "SELECT * from mouses";
 $result_mouse = mysqli_query($con,$query);
 $query = "SELECT * from keyboards";
 $result_keyboard = mysqli_query($con,$query);
 $query = "SELECT * from headsets";
 $result_headset = mysqli_query($con,$query);
-
 ?>
 <!DOCTYPE html>
 <html>

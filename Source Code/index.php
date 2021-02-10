@@ -1,6 +1,9 @@
-<?php require 'config/dbconnect.php';
-$query = "SELECT * from homeproducts";
-$result = mysqli_query($con,$query);
+<?php 
+session_start();
+    $_SESSION;
+    require 'config/dbconnect.php';
+    $query = "SELECT * from homeproducts";
+    $result = mysqli_query($con,$query);
 
 ?>
 <!DOCTYPE html>
@@ -89,7 +92,7 @@ $result = mysqli_query($con,$query);
                             <a href = "products.php" class = "product-name"><?php echo $product['name']; ?></a>
                     </div>
                 </div>
-                    <!--End of Single Product -->
+                <!--End of Single Product -->
                     
             <?php endforeach; ?>
         </div>

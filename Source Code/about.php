@@ -1,3 +1,8 @@
+<?php 
+session_start();
+    $_SESSION;
+    require 'config/dbconnect.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>

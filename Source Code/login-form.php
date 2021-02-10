@@ -8,7 +8,6 @@ session_start();
         if($_SERVER['REQUEST_METHOD'] == "POST"){
             //if true then info was POSTed
             $user_name = $_POST['user_name'];
-            $email = $_POST['email'];
             $password = $_POST['password'];
     
             if(!empty($user_name) && !empty($password)){
@@ -18,17 +17,15 @@ session_start();
                 $result = mysqli_query($con, $query);
                 
                 if($result){
-                    if($result && mysqli_num_rows($results) > 0){
-                        $user_data = mysqli_fetch_assoc($results);
+                    if($result && mysqli_num_rows($result) > 0){
+                        $user_data = mysqli_fetch_assoc($result);
                         if($user_data['password'] === $password){
                             $_SESSION['user_id'] = $user_data['user_id'];
-                            header('Location: index.php');
+                            header('Location: redirect.php');
                             die;
                         }
                    }
                 }
-                header('Location: index.php');
-                die;
             }
             else{
                 echo "Please enter valid information";
@@ -42,7 +39,7 @@ session_start();
             $user_name = $_POST['user_name'];
             $email = $_POST['email'];
             $password = $_POST['password'];
-            $password = md5($password);
+           
             if(!empty($user_name) && !empty($email) && !empty($password)){
                 //save to database
                 $user_id = random_number(20);

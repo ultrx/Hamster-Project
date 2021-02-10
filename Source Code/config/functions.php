@@ -1,15 +1,15 @@
 <?php 
 //login check and validation
-function check_login($pdo){
+function check_login($con){
 
    if(isset($_SESSION['user_id'])){
        $id = $_SESSION['user_id'];
        $query = "SELECT * from users WHERE user_id = '$id' LIMIT 1";
 
-       $result = mysqli_query($pdo, $query);
-       if($result && mysqli_num_rows($results) > 0){
+       $result = mysqli_query($con, $query);
+       if($result && mysqli_num_rows($result) > 0){
 
-            $user_data = mysqli_fetch_assoc($results);
+            $user_data = mysqli_fetch_assoc($result);
             return $user_data;
        }
    }
