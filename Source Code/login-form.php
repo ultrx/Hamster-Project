@@ -1,3 +1,63 @@
+<?php 
+session_start();
+    $_SESSION;
+    require 'config/dbconnect.php';
+    require 'config/functions.php';
+    //LOGIN
+    if(isset($_POST['login'])) { 
+        if($_SERVER['REQUEST_METHOD'] == "POST"){
+            //if true then info was POSTed
+            $user_name = $_POST['user_name'];
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+    
+            if(!empty($user_name) && !empty($password)){
+                //read from database
+                $user_id = random_number(20);
+                $query = "SELECT * from users WHERE user_name = '$user_name' limit 1";
+                $result = mysqli_query($con, $query);
+                
+                if($result){
+                    if($result && mysqli_num_rows($results) > 0){
+                        $user_data = mysqli_fetch_assoc($results);
+                        if($user_data['password'] === $password){
+                            $_SESSION['user_id'] = $user_data['user_id'];
+                            header('Location: index.php');
+                            die;
+                        }
+                   }
+                }
+                header('Location: index.php');
+                die;
+            }
+            else{
+                echo "Please enter valid information";
+            }
+        }
+    } 
+    //REGISTER
+    if(isset($_POST['register'])) { 
+        if($_SERVER['REQUEST_METHOD'] == "POST"){
+            //if true then info was POSTed
+            $user_name = $_POST['user_name'];
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+            $password = md5($password);
+            if(!empty($user_name) && !empty($email) && !empty($password)){
+                //save to database
+                $user_id = random_number(20);
+                $query = "INSERT into users (user_id, user_name, email, password) values ('$user_id', '$user_name', '$email', '$password')";
+                mysqli_query($con, $query);
+                
+                header('Location: login-form.php');
+                die;
+            }
+            else{
+                echo "Please enter valid information";
+            }
+        }  
+    }
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,19 +92,19 @@
             </div>
 
             <!---Log In Form-->
-            <form id="login" name="myform" method="post" onsubmit="return validateform()" class="input-group"> 
-                <input type="text" id="name" class="input-field" placeholder="Username" name="name" required>
+            <form id="login" name="myform" method="POST" onsubmit="return validateform()" class="input-group"> 
+                <input type="text" id="name" class="input-field" placeholder="Username" name="user_name" required>
                 <input type="password" id="password" class="input-field" placeholder="Password" name="password" required>
-                <button type="submit" class="submit-btn" style="color:white;" onclick="return validateform()">Log In</button>
+                <button type="submit" id="login" class="submit-btn" style="color:white;" onclick="return validateform()" name="login" value="login">Log In</button>
             </form>
             <!---End of Log In Form-->
 
             <!---Sign Up Form-->
-            <form id="register" name="myformRegister" method="post" onsubmit="return validateformRegister()" class="input-group">
-                <input type="text" id="name" class="input-field" placeholder="Username" name="name" required>
+            <form id="register" name="myformRegister" method="POST" onsubmit="return validateformRegister()" class="input-group">
+                <input type="text" id="name" class="input-field" placeholder="Username" name="user_name" required>
                 <input type="email" id="email" class="input-field" placeholder="Email" name="email" required>
                 <input type="password" id="password" class="input-field" placeholder="Password" name="password" required>
-                <button type="submit" class="submit-btn" style="color:white;" onclick="return validateformRegister()">Register</button>
+                <button type="submit" id="register" class="submit-btn" style="color:white;" onclick="return validateformRegister()" name="register" value="register">Register</button>
             </form>
             <!---End of Sign Up Form-->
 
@@ -83,7 +143,7 @@
             var name=document.myformRegister.name.value;  
             var email=document.myformRegister.email.value; 
             var password=document.myformRegister.password.value; 
-            if(name==null || name==""){  
+            if(name == null || name == ""){  
                 alert("Username can't be blank");  
                 return false;  
             }
@@ -91,7 +151,7 @@
                 alert("Please enter a valid e-mail address.");  
                 return false;  
             }  
-            if(password.length<6){  
+            if(password.length < 6){  
                 alert("Password must be at least 6 characters long.");  
                 return false;  
             }  

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 10, 2021 at 10:12 PM
+-- Generation Time: Feb 10, 2021 at 10:23 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.4.13
 
@@ -117,6 +117,29 @@ INSERT INTO `mouses` (`mouse_id`, `image`, `buton`, `name`, `price_before`, `pri
 (3, 'mouse3.png', 'buy now', 'Razer DeathAdder V2 Mini', '$ 79.99', '$ 49.99'),
 (4, 'mouse4.png', 'buy now', 'Razer DeathAdder', '$ 69.99', '$ 49.99');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` bigint(20) NOT NULL,
+  `user_id` bigint(20) NOT NULL,
+  `user_name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `user_id`, `user_name`, `email`, `password`, `date`) VALUES
+(7, 1, 'florian', 'ad@gmail.com', 'florian123', '2021-02-10 20:27:41'),
+(11, 8, 'edonedonedoinaelikdfnk', 'edon.kali@gmail.com', 'a307646df3cc99768b04cbcaef2f5825', '2021-02-10 21:22:27');
+
 --
 -- Indexes for dumped tables
 --
@@ -146,6 +169,14 @@ ALTER TABLE `mouses`
   ADD PRIMARY KEY (`mouse_id`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `user_name` (`user_name`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -172,6 +203,12 @@ ALTER TABLE `keyboards`
 --
 ALTER TABLE `mouses`
   MODIFY `mouse_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
