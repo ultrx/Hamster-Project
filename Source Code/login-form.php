@@ -69,7 +69,7 @@ session_start();
 <body>
 
     <!---NavBar-->
-    <?php include 'includes/navbar.php'; ?>
+    <?php  $page = 'login';include 'includes/navbar.php'; ?>
     <!---End of NavBar-->
 
     <main>

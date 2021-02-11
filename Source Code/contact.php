@@ -20,7 +20,7 @@ session_start();
 <body>
 
     <!---NavBar-->
-    <?php include 'includes/navbar.php'; ?>
+    <?php  $page = 'contact';include 'includes/navbar.php'; ?>
     <!---End of NavBar-->
 
     <main>

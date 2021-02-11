@@ -23,7 +23,7 @@ $result_headset = mysqli_query($con,$query);
 <body>
 
     <!---NavBar-->
-    <?php include 'includes/navbar.php'; ?>
+    <?php  $page = 'products';include 'includes/navbar.php'; ?>
     <!---End of NavBar-->
 
     <main>

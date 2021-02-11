@@ -4,6 +4,8 @@ session_start();
     require 'config/dbconnect.php';
     $query = "SELECT * from homeproducts";
     $result = mysqli_query($con,$query);
+    $query = "SELECT * from slider";
+    $result_slider = mysqli_query($con,$query);
 
 ?>
 <!DOCTYPE html>
@@ -20,43 +22,23 @@ session_start();
 <body>
 
     <!---NavBar-->
-    <?php include 'includes/navbar.php'; ?>
+    <?php $page = 'home';include 'includes/navbar.php'; ?>
     <!---End of NavBar-->
 
     <main>
 
         <!--Slider-->
         <div class="slider">
+
+        <?php foreach($result_slider as $myslider_fade): ?>
             <div class="myslider fade" style="display: block;">
                 <div class="txt">
-                    <h1>DESIGN</h1>
+                    <h1><?php echo $myslider_fade['name']; ?></h1>
                 </div>
-                <img src="images/slide1.png" style="width: 100%; height: 100%;">
+                <img src="images/<?php echo $myslider_fade['image']; ?>" style="width: 100%; height: 100%;">
             </div>
-            <div class="myslider fade">
-                <div class="txt">
-                    <h1>COMPATIBILITY</h1>
-                </div>
-                <img src="images/slide2.jpg" style="width: 100%; height: 100%;">
-            </div>
-            <div class="myslider fade">
-                <div class="txt">
-                    <h1>QUALITY</h1>
-                </div>
-                <img src="images/slide3.jpg" style="width: 100%; height: 100%;">
-            </div>
-            <div class="myslider fade">
-                <div class="txt">
-                    <h1>ERGONOMIC</h1>
-                </div>
-                <img src="images/slide4.png" style="width: 100%; height: 100%;">
-            </div>
-            <div class="myslider fade">
-                <div class="txt">
-                    <h1>COLORFUL</h1>
-                </div>
-                <img src="images/slide5.jpg" style="width: 100%; height: 100%;">
-            </div>
+    
+        <?php endforeach; ?>
 
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>

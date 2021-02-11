@@ -17,14 +17,14 @@ session_start();
 <body>
 
     <!---NavBar-->
-    <?php include 'includes/navbar.php'; ?>
+    <?php  $page = 'about';include 'includes/navbar.php'; ?>
     <!---End of NavBar-->
 
     <main>
 
         <!---About Us-->
-        <div class="about-section">
-            <div class="inner-container">
+        <div class="about-section" >
+        <div class="inner-container">
                 <h1>ABOUT US</h1>
                 <p class="text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus velit ducimus, enim inventore earum, eligendi nostrum pariatur necessitatibus eius dicta a voluptates sit deleniti autem error eos totam nisi neque voluptates sit deleniti autem error eos totam nisi neque.
