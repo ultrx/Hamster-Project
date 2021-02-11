@@ -21,7 +21,11 @@ session_start();
                         $user_data = mysqli_fetch_assoc($result);
                         if($user_data['password'] === $password){
                             $_SESSION['user_id'] = $user_data['user_id'];
-                            header('Location: redirect.php');
+                            header('Location: ../Source Code/dashboard/manage-users.php');
+                            die;
+                        }
+                        else{
+                            header('Location: ../Source Code/dashboard/manage-users.php');
                             die;
                         }
                    }
@@ -69,7 +73,7 @@ session_start();
 <body>
 
     <!---NavBar-->
-    <?php  $page = 'login';include 'includes/navbar.php'; ?>
+    <?php  $page = 'login'; include 'includes/navbar.php'; ?>
     <!---End of NavBar-->
 
     <main>

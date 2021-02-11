@@ -23,7 +23,7 @@ $result_headset = mysqli_query($con,$query);
 <body>
 
     <!---NavBar-->
-    <?php  $page = 'products';include 'includes/navbar.php'; ?>
+    <?php  $page = 'products'; include 'includes/navbar.php'; ?>
     <!---End of NavBar-->
 
     <main>
@@ -136,11 +136,6 @@ $result_headset = mysqli_query($con,$query);
                     
             <?php endforeach; ?>
                     </div>
-            </div>
-        </div>
-        <!--End of Product Section-->
-
-                </div>
             </div>
         </div>
         <!--End of Product Section-->
