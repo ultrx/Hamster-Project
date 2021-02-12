@@ -43,7 +43,7 @@ $result_headset = mysqli_query($con,$query);
                                 <a href="https://www.razer.com/gaming-mice/Razer-DeathAdder-V2/RZ01-03210400-R3M1"target="_blank"><img src = "images/<?php echo $product['image']; ?>" alt = "product image"></a>
                             </div>
                             <div class = "product-btns">
-                                <a href="https://www.razer.com/gaming-mice/Razer-DeathAdder-V2/RZ01-03210400-R3M1"target="_blank"><button type = "button" class = "btn-buy"> <?php echo $product['buton']; ?> </button></a>
+                                <a href="https://www.razer.com/gaming-mice/Razer-DeathAdder-V2/RZ01-03210400-R3M1"target="_blank"><button type = "button" class = "btn-buy">Buy Now </button></a>
                             </div>
                         </div>
 
@@ -51,8 +51,8 @@ $result_headset = mysqli_query($con,$query);
                             <div class = "product-info-top">
                             </div>
                             <a href = "https://www.razer.com/gaming-mice/Razer-DeathAdder-V2/RZ01-03210400-R3M1"target="_blank" class = "product-name"><?php echo $product['name']; ?></a>
-                            <p class = "product-price"><?php echo $product['price_before']; ?></p>
-                            <p class = "product-price"><?php echo $product['price_after']; ?></p>
+                            <p class = "product-price">$<?php echo $product['price_before']; ?></p>
+                            <p class = "product-price">$<?php echo $product['price_after']; ?></p>
                         </div>
                         <div class = "off-info">
                         </div>
@@ -82,7 +82,7 @@ $result_headset = mysqli_query($con,$query);
                                 <a href="https://www.razer.com/gaming-keyboards/Razer-BlackWidow-V3/RZ03-03540100-R3M1"target="_blank"><img src = "images/<?php echo $product['image']; ?>" alt = "product image"></a>
                             </div>
                             <div class = "product-btns">
-                                <a href="https://www.razer.com/gaming-keyboards/Razer-BlackWidow-V3/RZ03-03540100-R3M1"target="_blank"><button type = "button" class = "btn-buy"><?php echo $product['buton']; ?></button></a>
+                                <a href="https://www.razer.com/gaming-keyboards/Razer-BlackWidow-V3/RZ03-03540100-R3M1"target="_blank"><button type = "button" class = "btn-buy">Buy Now</button></a>
                             </div>
                         </div>
 
@@ -90,8 +90,8 @@ $result_headset = mysqli_query($con,$query);
                             <div class = "product-info-top">
                             </div>
                             <a href = "https://www.razer.com/gaming-keyboards/Razer-BlackWidow-V3/RZ03-03540100-R3M1"target="_blank" class = "product-name"><?php echo $product['name']; ?></a>
-                            <p class = "product-price"><?php echo $product['price_before']; ?></p>
-                            <p class = "product-price"><?php echo $product['price_after']; ?></p>
+                            <p class = "product-price">$<?php echo $product['price_before']; ?></p>
+                            <p class = "product-price">$<?php echo $product['price_after']; ?></p>
                         </div>
                     </div>
                     <!--End of Single Product -->
@@ -118,7 +118,7 @@ $result_headset = mysqli_query($con,$query);
                                 <a href="https://www.razer.com/console-headsets/Razer-Kaira-for-Xbox/RZ04-03480100-R3U1"target="_blank"><img src = "images/<?php echo $product['image']; ?>" alt = "product image"></a>
                             </div>
                             <div class = "product-btns">
-                                <a href="https://www.razer.com/console-headsets/Razer-Kaira-for-Xbox/RZ04-03480100-R3U1"target="_blank"><button type = "button" class = "btn-buy"> <?php echo $product['buton']; ?> </button></a>
+                                <a href="https://www.razer.com/console-headsets/Razer-Kaira-for-Xbox/RZ04-03480100-R3U1"target="_blank"><button type = "button" class = "btn-buy"> Buy Now </button></a>
                             </div>
                         </div>
 
@@ -126,8 +126,8 @@ $result_headset = mysqli_query($con,$query);
                             <div class = "product-info-top">
                             </div>
                             <a href = "https://www.razer.com/console-headsets/Razer-Kaira-for-Xbox/RZ04-03480100-R3U1"target="_blank" class = "product-name"><?php echo $product['name']; ?></a>
-                            <p class = "product-price"><?php echo $product['price_before']; ?></p>
-                            <p class = "product-price"><?php echo $product['price_after']; ?></p>
+                            <p class = "product-price">$<?php echo $product['price_before']; ?></p>
+                            <p class = "product-price">$<?php echo $product['price_after']; ?></p>
                         </div>
                         <div class = "off-info">
                         </div>
