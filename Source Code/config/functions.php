@@ -33,3 +33,5 @@ function random_number($length){
 }
 
 ?>
+<!-- pagereload -->
+
