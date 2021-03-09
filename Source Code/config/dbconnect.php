@@ -4,8 +4,9 @@ $username = 'root';
 $password = '';
 $dbname = "hamster";
 
-if(!$con = mysqli_connect($dbhost, $username, $password, $dbname)){
+ $con = new mysqli ($dbhost, $username, $password, $dbname);
 
-    die("Failed to connect with database");
+if($con->connect_error){
+    die("Lidhja deshtoi" . $con->connect_error);
 }
 ?>

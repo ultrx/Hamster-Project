@@ -25,7 +25,7 @@ session_start();
                             die;
                         }
                         else{
-                            header('Location: ../Source Code/dashboard/manage-users.php');
+                            header('Location: ../Source Code/login-form.php');
                             die;
                         }
                    }

@@ -77,7 +77,7 @@ ob_start();
 </td>
 </tr>
 <tr>
-<td colspan="2"><input type="submit" name="submit1" value="Add" ></td>
+<td align ="center"colspan="2"><input type="submit" name="submit1" value="Add"></td>
 </tr>
 
 </table>
@@ -87,7 +87,7 @@ if(isset($_POST["submit1"])){
      if(!empty($_POST["pcategory"]) && !empty($_POST["pimage"]) && !empty($_POST["pnm"]) && !empty($_POST["purl"]) && !empty($_POST["pbprice"]) && !empty($_POST["paprice"]) && !empty($_POST["paa"])){
           $selected = $_POST["pcategory"];
                mysqli_query($con,"insert into $selected values('','$_POST[pimage]','$_POST[pnm]','$_POST[purl]','$_POST[pbprice]','$_POST[paprice]','$_POST[paa]')");
-               header("Location:http://localhost/Hamster/Hamster-Project-WEB-/Source%20Code/dashboard/manage-products.php");
+               header("Location:manage-products.php");
                exit;
      }
     
