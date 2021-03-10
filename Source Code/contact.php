@@ -2,9 +2,6 @@
 session_start();
     $_SESSION;
     require 'config/dbconnect.php';
-    require 'config/functions.php';
-    $user_data = check_login($con);
-
 ?>
 <!DOCTYPE html>
 <html>

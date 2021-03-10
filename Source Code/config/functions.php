@@ -2,7 +2,7 @@
 //login check and validation
 function check_login($con){
 
-   if(isset($_SESSION['user_id'])){
+   if(isset($_SESSION['user_id'])){ 
        $id = $_SESSION['user_id'];
        $query = "SELECT * from users WHERE user_id = '$id' LIMIT 1";
 
@@ -33,5 +33,3 @@ function random_number($length){
 }
 
 ?>
-<!-- pagereload -->
-

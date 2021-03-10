@@ -1,4 +1,5 @@
 <?php
+ob_start();
 session_start();
 $_SESSION;
 require '../config/dbconnect.php';
@@ -11,7 +12,7 @@ if(mysqli_query($con, $sql)){
 
 }
 $sql ="DELETE FROM keyboards WHERE keyboard_id ='" . $_GET['keyboard_id'] . "'";
-    if(mysqli_query($con, $sql)){
+if(mysqli_query($con, $sql)){
     header("Location:manage-products.php");
 
 }

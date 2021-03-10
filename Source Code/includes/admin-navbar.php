@@ -5,7 +5,7 @@
         <i class="fas fa-bars"></i>
     </label>
     <label class="logo">
-        <a href="index.php">
+        <a href="../dashboard/manage-users.php">
             <img class="logo" src="../images/bardh.png"/>
         </a>
     </label>

@@ -19,6 +19,138 @@ body {
 	min-height: 100vh;
 }
 
+
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+.addUserModal {
+	background-color: #1f2b3a;;
+	margin: 4% auto;
+	padding: 20px;
+	border: 1px solid #5cc7c3;
+	width: 80%;
+	border-radius: 20px;
+}
+
+.addUsersForm {
+    width: 380px;
+    height: 200px;
+    position: relative;
+    margin: 5% auto;
+    background: #1f2b3a;
+    padding: 5px;
+    overflow: hidden;
+	border-radius: 20px;
+	color:white;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	
+}
+
+  /* The Close Button */
+.close {
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* End of Add form */
+
+/* Alerts */
+.alert {
+	padding: 20px;
+	background-color: #f44336;
+	color: white;
+	opacity: 1;
+	transition: opacity 0.6s;
+	display: none;
+  }
+  
+  .alert.success {background-color: #4CAF50;}
+  .alert.info {background-color: #2196F3;}
+  .alert.warning {background-color: #ff9800;}
+  
+  .closebtn {
+	margin-left: 15px;
+	color: white;
+	font-weight: bold;
+	float: right;
+	font-size: 22px;
+	line-height: 20px;
+	cursor: pointer;
+	transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+	color: black;
+  }
+
+/* End of Alerts */
+
+/* Table */
+
+#usersTable {
+	font-family: Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 95%;
+	margin: 5% auto;
+	border: 1px solid #45A29E;
+  }
+  
+  #usersTable td, #usersTable th {
+	color:white;
+	text-align: center;
+	padding: 8px;
+  }
+  
+  #usersTable tr:nth-child(even){background-color:#35475e;}
+  
+  #usersTable tr:hover {background-color: #3e597c;}
+  
+  #usersTable th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: center;
+	background-color: #1f2b3a;
+	color: white;
+  }
+
+.button {
+	border: none;
+	color: white;
+	padding: 10px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 2px 1px;
+	cursor: pointer;
+	overflow: hidden;
+	border-radius: 20px;
+  }
+.table-container  .button1 {background-color: #4CAF50;} /* Green */
+.table-container  .button2 {background-color: #f44336;} /* Red */ 
+/* End of Table */
+
 /* NavBar */
 nav{
 	background: #1f2b3a;

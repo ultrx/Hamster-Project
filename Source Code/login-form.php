@@ -1,63 +1,9 @@
 <?php 
-session_start();
+    ob_start();
+    session_start();
     $_SESSION;
     require 'config/dbconnect.php';
     require 'config/functions.php';
-    //LOGIN
-    if(isset($_POST['login'])) { 
-        if($_SERVER['REQUEST_METHOD'] == "POST"){
-            //if true then info was POSTed
-            $user_name = $_POST['user_name'];
-            $password = $_POST['password'];
-    
-            if(!empty($user_name) && !empty($password)){
-                //read from database
-                $user_id = random_number(20);
-                $query = "SELECT * from users WHERE user_name = '$user_name' limit 1";
-                $result = mysqli_query($con, $query);
-                
-                if($result){
-                    if($result && mysqli_num_rows($result) > 0){
-                        $user_data = mysqli_fetch_assoc($result);
-                        if($user_data['password'] === $password){
-                            $_SESSION['user_id'] = $user_data['user_id'];
-                            header('Location: ../Source Code/dashboard/manage-users.php');
-                            die;
-                        }
-                        else{
-                            header('Location: ../Source Code/login-form.php');
-                            die;
-                        }
-                   }
-                }
-            }
-            else{
-                echo "Please enter valid information";
-            }
-        }
-    } 
-    //REGISTER
-    if(isset($_POST['register'])) { 
-        if($_SERVER['REQUEST_METHOD'] == "POST"){
-            //if true then info was POSTed
-            $user_name = $_POST['user_name'];
-            $email = $_POST['email'];
-            $password = $_POST['password'];
-           
-            if(!empty($user_name) && !empty($email) && !empty($password)){
-                //save to database
-                $user_id = random_number(20);
-                $query = "INSERT into users (user_id, user_name, email, password) values ('$user_id', '$user_name', '$email', '$password')";
-                mysqli_query($con, $query);
-                
-                header('Location: login-form.php');
-                die;
-            }
-            else{
-                echo "Please enter valid information";
-            }
-        }  
-    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -71,6 +17,10 @@ session_start();
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>      
 </head>
 <body>
+
+    <!---Alerts-->
+    <?php include '../Source Code/includes/alerts.php'; ?>
+    <!---End of Alerts--> 
 
     <!---NavBar-->
     <?php  $page = 'login'; include 'includes/navbar.php'; ?>
@@ -96,6 +46,9 @@ session_start();
             <form id="login" name="myform" method="POST" onsubmit="return validateform()" class="input-group"> 
                 <input type="text" id="name" class="input-field" placeholder="Username" name="user_name" required>
                 <input type="password" id="password" class="input-field" placeholder="Password" name="password" required>
+                <br>
+                <br>
+                <input type="checkbox" onclick="showPassword()"><a style="color:white;font-size:15px;"> Show Password </a>
                 <button type="submit" id="login" class="submit-btn" style="color:white;" onclick="return validateform()" name="login" value="login">Log In</button>
             </form>
             <!---End of Log In Form-->
@@ -104,7 +57,10 @@ session_start();
             <form id="register" name="myformRegister" method="POST" onsubmit="return validateformRegister()" class="input-group">
                 <input type="text" id="name" class="input-field" placeholder="Username" name="user_name" required>
                 <input type="email" id="email" class="input-field" placeholder="Email" name="email" required>
-                <input type="password" id="password" class="input-field" placeholder="Password" name="password" required>
+                <input type="password" id="passwordReg" class="input-field" placeholder="Password" name="passwordReg" required>
+                <br>
+                <br>
+                <input type="checkbox" onclick="showPasswordReg()"><a style="color:white;font-size:15px;"> Show Password </a>
                 <button type="submit" id="register" class="submit-btn" style="color:white;" onclick="return validateformRegister()" name="register" value="register">Register</button>
             </form>
             <!---End of Sign Up Form-->
@@ -143,7 +99,7 @@ session_start();
         function validateformRegister(){  
             var name=document.myformRegister.name.value;  
             var email=document.myformRegister.email.value; 
-            var password=document.myformRegister.password.value; 
+            var password=document.myformRegister.passwordReg.value; 
             if(name == null || name == ""){  
                 alert("Username can't be blank");  
                 return false;  
@@ -157,6 +113,22 @@ session_start();
                 return false;  
             }  
         }  
+        function showPassword() {
+            var x = document.getElementById("password");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+        function showPasswordReg() {
+            var x = document.getElementById("passwordReg");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
     </script>
     </main>
 
@@ -166,3 +138,78 @@ session_start();
     
 </body>
 </html>
+
+<?php 
+   //LOGIN
+   if(isset($_POST['login'])) { 
+    if($_SERVER['REQUEST_METHOD'] == "POST"){
+        //if true then info was POSTed
+        $user_name = $_POST['user_name'];
+        $password = $_POST['password'];
+        if(!empty($_POST['admin'])){
+            $admin = $_POST['admin'];
+        }
+        if(!empty($user_name) && !empty($password)){
+            //read from database
+            $user_id = random_number(20);
+            $query = "SELECT * from users WHERE user_name = '$user_name' limit 1";
+            $result = mysqli_query($con, $query);
+            
+            if($result){
+                if($result && mysqli_num_rows($result) > 0){
+                    $user_data = mysqli_fetch_assoc($result);
+                    $row=mysqli_fetch_array($result);
+                    if($user_data['user_name'] === $user_name && $user_data['password'] === $password  && $user_data['admin'] == TRUE){
+                        $_SESSION['user_id'] = $user_data['user_id'];
+                        header('Location: ../Source Code/dashboard/manage-users.php');
+                        die;
+                    }
+                    else if($user_data['user_name'] === $user_name && $user_data['password'] === $password){
+                        $_SESSION['user_id'] = $user_data['user_id'];
+                        header('Location: ../Source Code/redirect.php');
+                        die;
+                    }
+                    else{
+                        echo '<script type="text/javascript">';
+                        echo 'document.getElementById("alert").style.display = "block" ';
+                        echo '</script>';
+                    }
+               }
+            }
+        }
+    }
+} 
+//REGISTER
+if(isset($_POST['register'])) { 
+    if($_SERVER['REQUEST_METHOD'] == "POST"){
+        //if true then info was POSTed
+        $user_name = $_POST['user_name'];
+        $email = $_POST['email'];
+        $password = $_POST['passwordReg'];
+
+        $sql_u = "SELECT * FROM users WHERE user_name='$username'";
+        $sql_e = "SELECT * FROM users WHERE email='$email'";
+        $res_u = mysqli_query($con, $sql_u);
+        $res_e = mysqli_query($con, $sql_e);
+
+        if (mysqli_num_rows($res_u) > 0) {
+            echo '<script type="text/javascript">';
+            echo 'document.getElementById("alert").style.display = "block" ';
+            echo '</script>';
+        }
+        else if(mysqli_num_rows($res_e) > 0){
+            echo '<script type="text/javascript">';
+            echo 'document.getElementById("alert").style.display = "block" ';
+            echo '</script>';	
+        }
+        else{
+            //save to database
+            $query = "INSERT into users (user_name, email, password) values ('$user_name', '$email', '$password')";
+            mysqli_query($con, $query);
+            echo '<script type="text/javascript">';
+            echo 'document.getElementById("alert success").style.display = "block" ';
+            echo '</script>';
+        }
+    }  
+}
+?>
