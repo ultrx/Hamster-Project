@@ -37,10 +37,10 @@
     <!---End of NavBar-->
 
     <main>
-    <button type = "button" id="myBtn" class = "btn-buy" style="margin: 1% 1% 1% 1%;float:right;">Add Products</button>
+    <button type = "button" id="myBtn" class = "button3" style="margin: 1% 1% 1% 1%;float:right;">Add Products</button>
     <div id="myModal" class="modal">
         <div class="modal-content">
-            <form class="addUserModal" id="myForm" name="form" action="manage-products.php" method="post" enctype="multipart/from-data">
+            <form class="addUserModal" id="myForm" name="form" action="manage-products.php" method="POST" enctype="multipart/form-data">
                 <table class="addUsersForm">
                 <span class="close">&times;</span>
                     <tr>
@@ -84,9 +84,12 @@
             </form>
             <?php
             if(isset($_POST["submit1"])){
-                if(!empty($_POST["pcategory"]) && !empty($_POST["pimage"]) && !empty($_POST["pnm"]) && !empty($_POST["purl"]) && !empty($_POST["pbprice"]) && !empty($_POST["paprice"]) && !empty($_POST["paa"])){
+                $filename = time() . $_FILES["pimage"]["name"]; 
+                $tempname = $_FILES["pimage"]["tmp_name"];     
+                move_uploaded_file($tempname, "../images/".$filename);
+                if(!empty($_POST["pcategory"]) && !empty($filename) && !empty($_POST["pnm"]) && !empty($_POST["purl"]) && !empty($_POST["pbprice"]) && !empty($_POST["paprice"]) && !empty($_POST["paa"])){
                     $selected = $_POST["pcategory"];
-                    mysqli_query($con,"insert into $selected values('','$_POST[pimage]','$_POST[pnm]','$_POST[purl]','$_POST[pbprice]','$_POST[paprice]','$_POST[paa]')");
+                    mysqli_query($con,"insert into $selected values('','$filename','$_POST[pnm]','$_POST[purl]','$_POST[pbprice]','$_POST[paprice]','$_POST[paa]')");
                     header('Location: ../dashboard/manage-products.php');
                 }
                 else{

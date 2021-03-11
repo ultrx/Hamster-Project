@@ -166,6 +166,20 @@ body {
 
 .product-btns  .button1 {background-color: #4CAF50;} /* Green */
 .product-btns  .button2 {background-color: #f44336;} /* Red */ 
+.button3 {
+	border: none;
+	color: white;
+	padding: 10px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 2px 1px;
+	cursor: pointer;
+	overflow: hidden;
+	border-radius: 20px;
+	background-color: #4CAF50;
+  }
 
 /* End of Table */
 
