@@ -15,13 +15,3 @@ if(isset($_POST['update'])){
     mysqli_query($con, "UPDATE info  SET  user_name = '$user_name', email='$email', 'admin='$emadminail' WHERE user_id=$user_id");
     header('location: crud.php');
 }
-
-//delete
-if(isset($_GET['del'])){
-    $id = $_GET['del'];
-    mysqli_query($con, "DELETE FROM info WHERE id=$id");
-    header('location: crud.php');
-}
-
-$results = mysqli_query($db, "SELECT * FROM info");
-?>

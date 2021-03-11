@@ -99,31 +99,6 @@
 }
 /* End of Image Slider Media Queries */
 
-/* About Us Media Queries */
-@media screen and (max-width:1200px){
-    .inner-container{
-        padding: 80px;
-    }
-}
-@media screen and (max-width:1200px){
-    .about-section{
-        background-size: 100%;
-        padding: 100px 40px;
-    }
-    .inner-container{
-        width: 100%;
-    }
-}
-@media screen and (max-width:1200px){
-    .about-section{
-        padding: 0;
-    }
-    .inner-container{
-        padding: 60px;
-    }
-}
-/* End of About Us Media Queries */
-
 /* Home Product Media Queries */
 @media screen and (min-width: 992px){
     .home-product-items{

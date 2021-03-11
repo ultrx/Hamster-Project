@@ -21,7 +21,7 @@ session_start();
     <!---End of NavBar-->
 
     <main>
-  
+
     </main>
 
     <!---Footer-->
