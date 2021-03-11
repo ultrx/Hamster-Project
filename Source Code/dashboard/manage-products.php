@@ -113,7 +113,7 @@
                                 <a href="<?php echo $product['url']; ?>"target="_blank"><img src = "../images/<?php echo $product['image']; ?>" alt = "product image"></a>
                             </div>
                             <div class = "product-btns">
-                                <a href="delete-data.php?mouse_id=<?php echo $product['mouse_id']; ?>"><button type = "button" class = "btn-buy"> Delete </button></a>
+                                <a href="delete-data.php?mouse_id=<?php echo $product['mouse_id']; ?>"><button type = "button" class = "button button2"> Delete </button></a>
                             </div>
                         </div>
 
@@ -152,7 +152,7 @@
                                 <a href="<?php echo $product['url']; ?>"target="_blank"><img src = "../images/<?php echo $product['image']; ?>" alt = "product image"></a>
                             </div>
                             <div class = "product-btns">
-                                <a href="delete-data.php?keyboard_id=<?php echo $product['keyboard_id']; ?>"><button type = "button" class = "btn-buy">Delete</button></a>
+                                <a href="delete-data.php?keyboard_id=<?php echo $product['keyboard_id']; ?>"><button type = "button" class = "button button2">Delete</button></a>
                             </div>
                         </div>
 
@@ -186,7 +186,7 @@
                                 <a href="<?php echo $product['url']; ?>"target="_blank"><img src = "../images/<?php echo $product['image']; ?>" alt = "product image"></a>
                             </div>
                             <div class = "product-btns">
-                                <a href="delete-data.php?headset_id=<?php echo $product['headset_id']; ?>"><button type = "button" class = "btn-buy"> Delete </button></a>
+                                <a href="delete-data.php?headset_id=<?php echo $product['headset_id']; ?>"><button type = "button" class = "button button2"> Delete </button></a>
                             </div>
                         </div>
 

@@ -14,7 +14,7 @@ function check_login($con){
        }
    }
    //redirect to login if validation fails
-   header("Location: login-form.php");
+   header("Location: ../login-form.php");
    die;
 }
 //random user_id generator

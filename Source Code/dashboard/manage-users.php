@@ -55,7 +55,7 @@ function refreshPage(){
                 <td><?php echo $users['date']; ?></td>
                 <td><?php echo $users['admin']; ?></td>
                 <td>
-                    <a href="delete-users.php?user_id=<?php echo $row['user_id']; ?>"><button type = "button" class = "button button1">Edit</button></a>
+                    <a href="edit-data.php?user_id=<?php echo $row['user_id']; ?>" class="edit_btn" ></a><button name="myBtnEdit" type = "button" id="myBtnEdit" class = "button button1">Edit</button></a>
                     <a href="delete-users.php?user_id=<?php echo $users['user_id']; ?>"><button type = "button" class = "button button2">Delete</button></a>
                 </td>  
                 <td></td>
@@ -101,6 +101,47 @@ function refreshPage(){
             ?>
         </div>
     </div>
+
+    <!-- Edit Modal -->
+    <div id="myModalEdit" class="modal">
+        <div class="modal-content">
+            <form class="addUserModal" name="form" action="manage-users.php" method="post" enctype="multipart/from-data">
+            <span class="closeEdit">&times;</span>
+                <table class="addUsersForm">
+                    <tr>
+                        <td>Username</td>
+                        <td><input type="text" name="unm"></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><input type="email" name="uemail"></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input type="text" name="upassword"></td>
+                    </tr>
+                    <tr>
+                        <td>Role</td>
+                        <td><input type="text" name="urole"></td>
+                    </tr>
+                    <tr>
+                        <td align ="center" colspan="2"><input type="submit"  name="addUser" value="Add"></td>
+                    </tr>
+                </table>
+            </form>
+            <?php
+            if(isset($_POST["addUserModal"])){
+                if(!empty($_POST["unm"]) && !empty($_POST["uemail"]) && !empty($_POST["upassword"]) && !empty($_POST["urole"])){
+                    $id_time = date("Y-m-d H:i:s",time());
+                    mysqli_query($con,"INSERT INTO users values('','$_POST[urole])','$_POST[unm]','$_POST[uemail]','$_POST[upassword]','$id_time')");
+                    header('Location: ../dashboard/manage-users.php');
+                }
+            }
+            ?>
+        </div>
+    </div> 
+    </div>
+
     </main>
 
     <!---Footer-->
@@ -110,29 +151,43 @@ function refreshPage(){
 </body>
 </html>
 <script>
-// Get the modal
-var modal = document.getElementById("myModal");
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    var modalEdit = document.getElementById("myModalEdit");
 
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+    var btnEdit = document.getElementById("myBtnEdit");
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    var spanEdit = document.getElementsByClassName("closeEdit")[0];
 
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+    modal.style.display = "block";
+    }
+    btnEdit.onclick = function() {
+        modalEdit.style.display = "block";
+    }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+    spanEdit.onclick = function() {
+        modalEdit.style.display = "none";
+    }
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modalEdit.style.display = "none";
+        }
+    }
 </script>

@@ -59,8 +59,8 @@ body {
 }
 
   /* The Close Button */
-.close {
-	color: #aaaaaa;
+.close  {
+	color: #45A29E;
 	float: right;
 	font-size: 28px;
 	font-weight: bold;
@@ -68,7 +68,21 @@ body {
   
 .close:hover,
 .close:focus {
-	color: #000;
+	color: #aaaaaa;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.closeEdit  {
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+  
+.closeEdit:hover,
+.closeEdit:focus {
+	color: #45A29E;
 	text-decoration: none;
 	cursor: pointer;
 }
@@ -149,6 +163,10 @@ body {
   }
 .table-container  .button1 {background-color: #4CAF50;} /* Green */
 .table-container  .button2 {background-color: #f44336;} /* Red */ 
+
+.product-btns  .button1 {background-color: #4CAF50;} /* Green */
+.product-btns  .button2 {background-color: #f44336;} /* Red */ 
+
 /* End of Table */
 
 /* NavBar */

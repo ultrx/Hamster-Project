@@ -187,7 +187,7 @@ if(isset($_POST['register'])) {
         $email = $_POST['email'];
         $password = $_POST['passwordReg'];
 
-        $sql_u = "SELECT * FROM users WHERE user_name='$username'";
+        $sql_u = "SELECT * FROM users WHERE user_name='$user_name'";
         $sql_e = "SELECT * FROM users WHERE email='$email'";
         $res_u = mysqli_query($con, $sql_u);
         $res_e = mysqli_query($con, $sql_e);

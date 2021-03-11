@@ -5,13 +5,23 @@ require '../config/dbconnect.php';
 require '../config/functions.php';
 $user_data = check_login($con);
 
+// update
+if(isset($_POST['update'])){
+    $user_name = mysql_real_escape_string($_POST['user_name']);
+    $email = mysql_escape_string($_POST['email']);
+    $admin = mysql_escape_string($_POST['admin']);
+    $user_id = mysql_escape_string($_POST['user_id']);
 
-$sql ="UPDATE FROM users SET user_id ='" . $_GET['user_id'] . "', admin ='" . $_GET['admin'] . "', user_name ='" . $_GET['user_name'] . "' , password ='" . $_GET['password'] . "' ";
-if(mysqli_query($con, $sql)){
-    header("Location:manage-users.php");
-
+    mysqli_query($con, "UPDATE info  SET  user_name = '$user_name', email='$email', 'admin='$emadminail' WHERE user_id=$user_id");
+    header('location: crud.php');
 }
 
+//delete
+if(isset($_GET['del'])){
+    $id = $_GET['del'];
+    mysqli_query($con, "DELETE FROM info WHERE id=$id");
+    header('location: crud.php');
+}
 
-
+$results = mysqli_query($db, "SELECT * FROM info");
 ?>

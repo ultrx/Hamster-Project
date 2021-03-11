@@ -9,17 +9,18 @@
   <strong>Success!</strong>
 </div>
 
-<div class="alert info" id="alert info">
-  <span class="closebtn">&times;</span>  
-  <strong>Info!</strong>
-</div>
-
-<div class="alert warning" id="alert warning">
-  <span class="closebtn">&times;</span>  
-  <strong>Warning!</strong>
-</div>
-
 <script>
+
+const timeout = document.getElementById('alert');
+  setTimeout(hideElement, 4000);
+  function hideElement() {
+    timeout.style.display = 'none';
+  }
+const timeoutSuccess = document.getElementById('alert success');
+  setTimeout(hideElementSuccess, 4000);
+  function hideElementSuccess() {
+    timeoutSuccess.style.display = 'none';
+  }
 var close = document.getElementsByClassName("closebtn");
 var i;
 for (i = 0; i < close.length; i++) {
