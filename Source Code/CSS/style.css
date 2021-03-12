@@ -926,3 +926,101 @@ img{
 }
 /* End of Footer */
 
+/* News */
+
+
+.center
+{
+  height:20px;
+  width:100%;
+  display: inline;
+}
+
+
+
+.property-card
+{
+    margin: 10% auto;
+      height:20em;
+      width:320px;
+      display:flex;
+      -webkit-box-orient:vertical;
+      -webkit-box-direction:normal;
+      -ms-flex-direction:column;
+      flex-direction:column;
+      position:relative;
+      -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+      -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+      transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+      border-radius:16px;
+      overflow:hidden;
+	  
+
+}
+
+
+.property-image
+{
+  
+  width:320px;
+  padding:0;
+  position:Absolute;
+  top:0px;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+
+
+.property-description
+{
+  background-color: #ffffff;
+  height:12em;
+  width:320px;
+  position:absolute;
+  bottom:0em;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  text-align:center;
+  
+}
+.endnews{
+	background-color: #eee;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    padding: 3px;
+    color: #aaaaaa;
+}
+.news{
+	margin-top:5px;
+	height:12em;
+  	width:320px;
+	-webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+	-o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+	transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  	overflow-y: scroll;
+	text-align:center;
+	color:#1f2b3a;
+	
+}
+::-webkit-scrollbar {
+	width: 4px;
+  }
+  
+  /* Track */
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	background: grey; 
+	border-radius: 15px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: grey;; 
+  }
+
+/* End Of News */
