@@ -14,6 +14,6 @@
         <li><a id="linav" class="<?php if($page=='manage-products'){echo 'activenav';}?>" href="../dashboard/manage-products.php">MANAGE PRODUCTS</a></li>
         <li><a id="linav" class="<?php if($page=='manage-news'){echo 'activenav';}?>" href="../dashboard/manage-news.php">MANAGE NEWS</a></li>
         <li><a id="linav" class="<?php if($page=='manage-contact'){echo 'activenav';}?>" href="../dashboard/manage-contact.php">MANAGE CONTACT</a></li>
-        <li><a id="linav" class="<?php if($page=='login'){echo 'activenav';}?>" href="../login-form.php">LOG OUT</a></li>
+        <li><a id="linav" href="../logout.php" >LOG OUT</a></li>
     </ul>
 </nav>

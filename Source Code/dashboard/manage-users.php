@@ -12,7 +12,7 @@ function refreshPage(){
     $user_data = check_login($con);
     $con=mysqli_connect("localhost","root","");
     mysqli_select_db($con,"hamster");
-    $query = "SELECT * from users";
+    $query = "SELECT * FROM users";
     $result_users = mysqli_query($con, $query);
 ?>
 <!DOCTYPE html>
@@ -39,34 +39,37 @@ function refreshPage(){
     <main>
     
         <div class="table-container">
-            <table id="usersTable">
-                <tr>
-                    <th>User Name</th>
-                    <th>Email</th>
-                    <th>Register Date</th>
-                    <th>Role</th>
-                    <th>Action</th>
-                    <th><button type = "button" id="myBtn" class = "button button1">+</button></th>
-                </tr>
-                <?php foreach($result_users as $users): ?>
-                <tr>
-                    <td><?php echo $users['user_name']; ?></td>
-                    <td><?php echo $users['email']; ?></td>
-                    <td><?php echo $users['date']; ?></td>
-                    <td><?php echo $users['admin']; ?></td>
-                    <td>
-                        <a href="delete-users.php?user_id=<?php echo $users['user_id']; ?>"><button type = "button" class = "button button2">Delete</button></a>
-                    </td>  
-                    <td></td>
-                </tr>
-                <?php endforeach; ?>
-            </table>
+            <form  name="form" action="manage-users.php" method="POST" enctype="multipart/from-data">
+                <table id="usersTable">
+                    <tr>
+                        <th>User Name</th>
+                        <th>Email</th>
+                        <th>Register Date</th>
+                        <th>Role</th>
+                        <th>Action</th>
+                        <th><button type = "button" id="myBtn" class = "button button1">+</button></th>
+                    </tr>
+                    <?php foreach($result_users as $users): ?>
+                    <tr>
+                        <td><input type="text" value="<?php echo $users['user_name']; ?>" name="updatedName" style="background-color:transparent;border:none;color:white;font-size:18px;text-align:left;"></td>
+                        <td><input type="email" value="<?php echo $users['email']; ?>" name="updatedEmail" style="background-color:transparent;border:none;color:white;font-size:18px;text-align:left;"></td>
+                        <td><?php echo $users['date']; ?></td>
+                        <td><input type="text" value="<?php echo $users['admin']; ?>" name="updatedRole" style="background-color:transparent;border:none;color:white;font-size:18px;text-align:center;"></td>
+                        <td>
+                            <a href="manage-users.php?user_id=<?php echo $users['user_id']; ?>"><button id="myBtn" name="editUser" type = "button" class = "button button3">Save</button></a>
+                            <a href="delete-users.php?user_id=<?php echo $users['user_id']; ?>"><button type = "button" class = "button button2">Delete</button></a>
+                        </td>  
+                        <td></td>
+                    </tr>
+                    <?php endforeach; ?>
+                </table>
+            </form>
         </div>
 
         <div id="myModal" class="modal">
             <div class="modal-content">
                 <form class="addUserModal" name="form" action="manage-users.php" method="post" enctype="multipart/from-data">
-                <span class="close">&times;</span>
+                    <span class="close">&times;</span>
                     <table class="addUsersForm">
                         <tr>
                             <td>Username</td>
@@ -92,10 +95,20 @@ function refreshPage(){
                 <?php
                 if(isset($_POST["addUser"])){
                     if(!empty($_POST["unm"]) && !empty($_POST["uemail"]) && !empty($_POST["upassword"]) && !empty($_POST["urole"])){
-                            $id_time = date("Y-m-d H:i:s",time());
-                            mysqli_query($con,"INSERT INTO users values('','$_POST[urole])','$_POST[unm]','$_POST[uemail]','$_POST[upassword]','$id_time')");
-                            header('Location: ../dashboard/manage-users.php');
+                        $id_time = date("Y-m-d H:i:s",time());
+                        mysqli_query($con,"INSERT INTO users values('','$_POST[urole])','$_POST[unm]','$_POST[uemail]','$_POST[upassword]','$id_time')");
+                        header('Location: ../dashboard/manage-users.php'); 
                     }
+                    else{
+                        echo '<script type="text/javascript">';
+                        echo 'document.getElementById("alert").style.display = "block" ';
+                        echo '</script>';
+                    }
+                }
+                if(isset($_POST['editUser'])){
+                    //mysqli_query($con,"INSERT INTO users VALUES('','$_POST[updatedRole])','$_POST[updatedName]','$_POST[updatedEmail]','$_POST[upassword]','')");
+                    mysqli_query($con,"UPDATE users SET user_name='$_POST[updatedName]', admin='$_POST[updatedRole]', email='$_POST[updatedEmail]' WHERE id = '$_GET[user_id]'");
+                    header('Location: ../dashboard/manage-users.php');
                 }
                 ?>
             </div>

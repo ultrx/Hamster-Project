@@ -92,6 +92,7 @@ nav #linav.activenav, #linav:hover{
   }
   
   /* Modal Content */
+.editUsersForm,
 .addUserModal {
 	background-color: #1f2b3a;;
 	margin: 4% auto;
@@ -100,7 +101,7 @@ nav #linav.activenav, #linav:hover{
 	width: 80%;
 	border-radius: 20px;
 }
-
+.editUsersForm,
 .addUsersForm {
     width: 380px;
     height: 200px;
@@ -220,12 +221,14 @@ nav #linav.activenav, #linav:hover{
   }
 .table-container  .button1 {background-color: #4CAF50;} /* Green */
 .table-container  .button2 {background-color: #f44336;} /* Red */ 
+.table-container  .button3 {background-color: #008CBA;} /* Blue */
 
 .product-btns  .button1 {background-color: #4CAF50;} /* Green */
 .product-btns  .button2 {background-color: #f44336;} /* Red */ 
+
 .button3 {
 	border: none;
-	color: white;
+	background-color: #4CAF50; /* Green */
 	padding: 10px 25px;
 	text-align: center;
 	text-decoration: none;

@@ -4,6 +4,7 @@ session_start();
     require 'config/dbconnect.php';
     require 'config/functions.php';
     $user_data = check_login($con);
+    session_destroy();
 
 ?>
 <!DOCTYPE html>

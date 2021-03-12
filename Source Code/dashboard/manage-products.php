@@ -37,7 +37,7 @@
     <!---End of NavBar-->
 
     <main>
-    <button type = "button" id="myBtn" class = "button3" style="margin: 1% 1% 1% 1%;float:right;">Add Products</button>
+    <button type = "button" id="myBtn" class = "button3" style="margin: 1% 1% 1% 1%;float:right;color:white">Add Products</button>
     <div id="myModal" class="modal">
         <div class="modal-content">
             <form class="addUserModal" id="myForm" name="form" action="manage-products.php" method="POST" enctype="multipart/form-data">

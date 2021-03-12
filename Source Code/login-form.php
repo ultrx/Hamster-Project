@@ -153,8 +153,7 @@
             //read from database
             $user_id = random_number(20);
             $query = "SELECT * from users WHERE user_name = '$user_name' limit 1";
-            $result = mysqli_query($con, $query);
-            
+            $result = mysqli_query($con, $query);    
             if($result){
                 if($result && mysqli_num_rows($result) > 0){
                     $user_data = mysqli_fetch_assoc($result);
@@ -194,12 +193,12 @@ if(isset($_POST['register'])) {
 
         if (mysqli_num_rows($res_u) > 0) {
             echo '<script type="text/javascript">';
-            echo 'document.getElementById("alert").style.display = "block" ';
+            echo 'document.getElementById("alertExists").style.display = "block" ';
             echo '</script>';
         }
         else if(mysqli_num_rows($res_e) > 0){
             echo '<script type="text/javascript">';
-            echo 'document.getElementById("alert").style.display = "block" ';
+            echo 'document.getElementById("alertExistsEmail").style.display = "block" ';
             echo '</script>';	
         }
         else{

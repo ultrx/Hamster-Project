@@ -2,12 +2,12 @@
     <div class="footer-left">
         <img class="footer-logo" src="images/bardh.png">
         <div class="footer-links">
-            <a href="home.html">HOME</a></li>
-            <a href="products.html">PRODUCTS</a></li>   
-            <a href="contact.html">CONTACT</a></li>    
+            <a href="index.php">HOME</a></li>
+            <a href="products.php">PRODUCTS</a></li>   
+            <a href="contact.php">CONTACT</a></li>    
         </div>
         <p class="footer-company">
-            Hamster Store @ 2020
+            Hamster Store @ 2021
         </p>
     </div>
     <div class="footer-center">

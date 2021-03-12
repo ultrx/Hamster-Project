@@ -7,7 +7,7 @@
             <a href="contact.html">CONTACT</a></li>    
         </div>
         <p class="footer-company">
-            Hamster Store @ 2020
+            Admin Dashboard @ 2021
         </p>
     </div>
     <div class="footer-center">
@@ -21,13 +21,13 @@
         </div>
         <div>
             <img class="footer-logos" src="../images/em.png">
-            <p>support@hamster.com</p> 
+            <p>dev@hamster.com</p> 
         </div>
     </div>
     <div class="footer-right">
         <p class="footer-company-about">
-            <span>About Us</span>
-            We are the Best Online Store!
+            <span>Admin Dashboard</span>
+            Powered by Hamster
         </p>
         <div class="footer-social">
             <a href="https://www.facebook.com" target="_blank"><img class="socials-logo" src="../images/fb.png"></a>
