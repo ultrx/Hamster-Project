@@ -495,6 +495,55 @@ input[type=submit]:hover{
 }
 /* End of Contact Form */
 
+/* Manage Contacts */
+.contacts{
+	background: transparent;
+    padding: 20px 0;
+	word-wrap: break-word;
+}
+.contact{
+	word-wrap: break-word;
+}
+.contacts-container{
+    width: 90%;
+    margin: 0 auto;
+}
+.contact-div{
+	margin: 32px;
+    position: relative;
+}
+.contact-info{
+    background: #45A29E;
+    padding: 32px;
+    text-align: center;
+	border-radius: 10px;
+	color: white;
+	font-family: consolas;
+}
+.contact-info b{
+	color: #1f2b3a;
+}
+.contacts p:nth-child(1) {
+	float: left;
+}
+.contacts p:nth-child(3) {
+	float: left;
+}
+.contacts p:nth-child(5) {
+	font-size: 25px;
+}
+.contacts p:nth-child(7) {
+	font-size: 17.5px;
+	text-align: left;
+}
+.contacts h2{
+	text-align: left;
+	color: #1f2b3a;
+}
+
+/* End of Manage Contacts */
+
+
 /* Log In/Sign Up Form Box */
 .hero{
 	margin: 0;

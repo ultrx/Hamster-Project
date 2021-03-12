@@ -1,7 +1,10 @@
 <?php 
-session_start();
+    ob_start();
+    session_start();
     $_SESSION;
     require 'config/dbconnect.php';
+    $query = "SELECT * from contacts";
+    $result_contacts = mysqli_query($con,$query);
 ?>
 <!DOCTYPE html>
 <html>
@@ -16,6 +19,10 @@ session_start();
 </head>
 <body>
 
+    <!---Alerts-->
+    <?php include 'includes/alerts.php'; ?>
+    <!---End of Alerts-->
+
     <!---NavBar-->
     <?php  $page = 'contact';include 'includes/navbar.php'; ?>
     <!---End of NavBar-->
@@ -24,9 +31,9 @@ session_start();
 
         <!---Contact Form-->
         <div class="contact-container">
-            <form id="myform" name="validation"  onsubmit="return validationonSubmit()" >
+            <form id="myform" name="validation" method="POST" onsubmit="return validationonSubmit()">
               <label for="fname">First Name</label>
-              <input type="text" id="fname" name="firstname" placeholder="First name" required>
+              <input type="text" id="fname" name="name" placeholder="First name" required>
           
               <label for="lname">Last Name</label>
               <input type="text" id="lname" name="lastname" placeholder="Last name"required >
@@ -37,18 +44,33 @@ session_start();
               <label for="subject">Subject</label>
               <textarea id="subject" name="subject" placeholder="Write something..." style="height:200px" required></textarea>
           
-              <a href="home.html"><input type="submit" value="Submit" onclick="return validationonSubmit()"> </a>
+              <a href="home.html"><input name="submit" type="submit" value="Submit" onclick="return validationonSubmit()"> </a>
             </form>
         </div>
         <!---End of Contact Form-->
+        <?php
+            if(isset($_POST["submit"])){
+                if(!empty($_POST["name"]) && !empty($_POST["lastname"]) && !empty($_POST["email"]) && !empty($_POST["subject"])){
+                    mysqli_query($con,"INSERT INTO contacts VALUES('','$_POST[name]','$_POST[lastname]','$_POST[email]','$_POST[subject]')");
+                    echo '<script type="text/javascript">';
+                    echo 'document.getElementById("alert success").style.display = "block" ';
+                    echo '</script>';
+                }
+                else{
+                    echo '<script type="text/javascript">';
+                    echo 'document.getElementById("alert").style.display = "block" ';
+                    echo '</script>';    
+                }
+            }
+            ?>
 
         <script>
             function validationonSubmit(){  
-                var firstname=document.validation.firstname.value;  
+                var name=document.validation.name.value;  
                 var lastname=document.validation.lastname.value; 
                 var email=document.validation.email.value; 
                 var subject=document.validation.subject.value;  
-                if(firstname==null || firstname==""){  
+                if(name==null || name==""){  
                     alert("Name can't be blank");  
                     return false;  
                 }
