@@ -52,12 +52,11 @@ function refreshPage(){
                     </tr>
                     <?php foreach($result_users as $users): ?>
                     <tr>
-                        <td><input type="text" value="<?php echo $users['user_name']; ?>" name="updatedName" style="background-color:transparent;border:none;color:white;font-size:18px;text-align:left;"></td>
-                        <td><input type="email" value="<?php echo $users['email']; ?>" name="updatedEmail" style="background-color:transparent;border:none;color:white;font-size:18px;text-align:left;"></td>
+                        <td><?php echo $users['user_name']; ?></td>
+                        <td><?php echo $users['email']; ?></td>
                         <td><?php echo $users['date']; ?></td>
-                        <td><input type="text" value="<?php echo $users['admin']; ?>" name="updatedRole" style="background-color:transparent;border:none;color:white;font-size:18px;text-align:center;"></td>
+                        <td><?php echo $users['admin']; ?></td>
                         <td>
-                            <a href="manage-users.php?user_id=<?php echo $users['user_id']; ?>"><button id="myBtn" name="editUser" type = "button" class = "button button3">Save</button></a>
                             <a href="delete-users.php?user_id=<?php echo $users['user_id']; ?>"><button type = "button" class = "button button2">Delete</button></a>
                         </td>  
                         <td></td>
@@ -93,6 +92,7 @@ function refreshPage(){
                         </tr>
                     </table>
                 </form>
+                <!--Add User-->
                 <?php
                 if(isset($_POST["addUser"])){
                     if(!empty($_POST["unm"]) && !empty($_POST["uemail"]) && !empty($_POST["upassword"]) && !empty($_POST["urole"])){
@@ -106,15 +106,8 @@ function refreshPage(){
                         echo '</script>';
                     }
                 }
-                if(isset($_POST['editUser'])){
-                    $id=$_GET['user_id'];
-                    //mysqli_query($con,"INSERT INTO users VALUES('','$_POST[updatedRole])','$_POST[updatedName]','$_POST[updatedEmail]','$_POST[upassword]','')");
-                    mysqli_query($con,"UPDATE users SET user_name='$_POST[updatedName]', admin='$_POST[updatedRole]', email='$_POST[updatedEmail]' WHERE user_id = '$id'");
-                    header('Location: ../dashboard/manage-users.php');
-                }
-               
-                
                 ?>
+                <!--End of Add User-->
             </div>
         </div>
     </main>
@@ -125,6 +118,8 @@ function refreshPage(){
     
 </body>
 </html>
+
+<!--Modal Open Javascript-->
 <script>
     // Get the modal
     var modal = document.getElementById("myModal");
@@ -150,3 +145,4 @@ function refreshPage(){
         }
     }
 </script>
+<!--End of Modal Open Javascript-->

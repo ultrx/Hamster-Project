@@ -37,8 +37,8 @@ $result_news = mysqli_query($con,$query);
                             </div></a>
                         <div class="property-description">
                             <div class ="endnews">
-                                <p>Author:<?php echo $news['posted_by']; ?></p>
-                                <p>Date:<?php echo $news['date']; ?></p>
+                                <p>Author: <?php echo $news['posted_by']; ?></p>
+                                <p>Date: <?php echo $news['date']; ?></p>
                                 </div>
                                 <div class="news1">
                                     <h3 class="news-title"> <?php echo $news['title']; ?> </h3> 

@@ -36,7 +36,7 @@ session_start();
                 <table class="addUsersForm">
                 <span class="close">&times;</span>
                     <tr>
-                        <td>Title </td>
+                        <td>Title</td>
                         <td><input type="text" name="title"></td>
                     </tr>
                     <tr>
@@ -44,11 +44,11 @@ session_start();
                         <td><input type="file" name="image"></td>
                     </tr>
                     <tr>
-                        <td>Author </td>
+                        <td>Author</td>
                         <td><input type="text" name="author"></td>
                     </tr>
                     <tr>
-                        <td>Text </td>
+                        <td>Text</td>
                         <td><textarea style="width: 100%;" type="textbox"  class="textarea" name="text"></textarea></td>
                     </tr>
                     <tr>
@@ -56,10 +56,11 @@ session_start();
                     </tr>
                 </table>
             </form>
+            <!--Add News-->
             <?php
             if(isset($_POST["submit1"])){
-                $filename = time() . $_FILES["pimage"]["name"]; 
-                $tempname = $_FILES["pimage"]["tmp_name"];     
+                $filename = time() . $_FILES["image"]["name"]; 
+                $tempname = $_FILES["image"]["tmp_name"];     
                 move_uploaded_file($tempname, "../images/".$filename);
                 if(!empty($_POST["title"]) && !empty($filename) && !empty($_POST["author"]) && !empty($_POST["text"])){
                     $id_time = date("Y-m-d H:i:s",time());
@@ -73,47 +74,46 @@ session_start();
                 }
             }
             ?>
+            <!--End of Add News-->
         </div>
     </div>
 
-<!--News Section -->
-<div class = "products">
-    <div class = "products-container">
-        <div class = "product-items">
-        <?php foreach($result_news as $news): ?>
-        <!-- Single News -->
-         <div class="property-card">
-                    <a href="#">
-                    <div class="property-image">
-                    <img class="property-image" src= "../images/<?php echo $news['image']; ?>" alt="new image">
-                    </div></a>
-                <div class="property-description">
-                    <div class ="endnews">
-                        <p>Author:<?php echo $news['posted_by']; ?></p>
-                        <a href="delete-news.php?news_id=<?php echo $news['news_id']; ?>"><button type = "button" class = "news-button"> Delete </button></a>
-                        <p>Date:<?php echo $news['date']; ?></p>
-                        </div>
-                        <div class="news1">
-                            <h3 class="news-title"> <?php echo $news['title']; ?> </h3> 
-                            <br>
-                            <p><?php echo $news['text']; ?></p>
-                            
+    <!--News Section -->
+    <div class = "products">
+        <div class = "products-container">
+            <div class = "product-items">
+            <?php foreach($result_news as $news): ?>
+
+            <!-- Single News -->
+            <div class="property-card">
+                        <a href="#">
+                        <div class="property-image">
+                        <img class="property-image" src= "../images/<?php echo $news['image']; ?>" alt="new image">
+                        </div></a>
+                    <div class="property-description">
+                        <div class ="endnews">
+                            <p>Author:<?php echo $news['posted_by']; ?></p>
+                            <a href="delete-news.php?news_id=<?php echo $news['news_id']; ?>"><button type = "button" class = "news-button">Delete</button></a>
+                            <p>Date:<?php echo $news['date']; ?></p>
+                            </div>
+                            <div class="news1">
+                                <h3 class="news-title"> <?php echo $news['title']; ?> </h3> 
+                                <br>
+                                <p><?php echo $news['text']; ?></p>
+                                
+                            </div>
                         </div>
                     </div>
-                </div>
-              
-            <!--End of Single News -->
-            <?php endforeach; ?>
+                
+                <!--End of Single News -->
+                <?php endforeach; ?>
 
-
+            </div>
         </div>
     </div>
-</div>
-<!--End of News Section-->
+    <!--End of News Section-->
 
-
-
-</main>
+    </main>
 
     <!---Footer-->
     <?php include '../includes/admin-footer.php'; ?>
@@ -121,30 +121,30 @@ session_start();
     
 </body>
 </html>
+<!--Modal Open Javascript-->
 <script>
-// Get the modal
-var modal = document.getElementById("myModal");
+    // Get the modal
+    var modal = document.getElementById("myModal");
 
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+    modal.style.display = "block";
+    }
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
 </script>
+<!--End of Modal Open Javascript-->

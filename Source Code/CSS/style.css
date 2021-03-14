@@ -181,9 +181,11 @@ nav #linav.activenav, #linav:hover{
 #usersTable {
 	font-family: Arial, Helvetica, sans-serif;
 	border-collapse: collapse;
-	width: 95%;
+	width: 85%;
+	overflow:hidden;
 	margin: 5% auto;
 	border: 1px solid #45A29E;
+
   }
   
   #usersTable td, #usersTable th {
@@ -434,6 +436,7 @@ nav #linav.activenav, #linav:hover{
     background-color:transparent;
     overflow: hidden;
     padding: 100px 0;
+	border-bottom: 1px solid #45A29E;
 }
 .inner-container{
     width: 50%;
@@ -930,17 +933,15 @@ img{
   width:100%;
   display: inline;
 }
-
-
-
 .property-card
 {
     margin: 10% auto;
-      height:20em;
-      width:310px;
-      display:flex;
-      position:relative;
-      overflow:hidden;
+    height:20em;
+    width:310px;
+	border-radius: 10px;
+    display:flex;
+    position:relative;
+    overflow:hidden;
 
 }
 .property-image
@@ -955,8 +956,6 @@ img{
   background-size:cover;
   background-repeat:no-repeat;
 }
-
-
 .property-description
 {
   background-color: #45A29E transparent;

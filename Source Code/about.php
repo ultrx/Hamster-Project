@@ -38,6 +38,7 @@ session_start();
         </div>
         <!---End of About Us-->
     
+        <!--What we offer-->
         <div class="news">
             <div class="container">
                 <div class="card">
@@ -81,6 +82,8 @@ session_start();
                 </div>
             </div>
         </div>
+        <!--End of What we offer-->
+
     </main>
 
     <!---Footer-->

@@ -48,6 +48,8 @@
             </form>
         </div>
         <!---End of Contact Form-->
+
+        <!--Submit Contact Form-->
         <?php
             if(isset($_POST["submit"])){
                 if(!empty($_POST["name"]) && !empty($_POST["lastname"]) && !empty($_POST["email"]) && !empty($_POST["subject"])){
@@ -63,6 +65,7 @@
                 }
             }
             ?>
+        <!--End of Submit Contact Form-->
 
         <script>
             function validationonSubmit(){  

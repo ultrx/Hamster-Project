@@ -1,12 +1,11 @@
 <?php 
-session_start();
+    session_start();
     $_SESSION;
     require '../config/dbconnect.php';
     require '../config/functions.php';
     $user_data = check_login($con);
     $query = "SELECT * from contacts";
     $result_contacts = mysqli_query($con,$query);
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -26,35 +25,36 @@ session_start();
     <!---End of NavBar-->
 
     <main>
-                <!--Product Section Mouses-->
-                <div class = "contacts">
+
+        <!--Product Section Mouses-->
+        <div class = "contacts">
             <div class = "contacts-container">
                 <div class = "contact-items">
                     <?php foreach($result_contacts as $contacts): ?>
 
-                <!-- Single Product -->
-                <div class = "contact-div">
+                    <!-- Single Product -->
+                    <div class = "contact-div">
                         <div class = "contact-info">
                             <p class = "contact"><b>Sent by: </b><?php echo $contacts['name'];?> <?php echo $contacts['lastname'];?></p>
                             <br>
                             <p class = "contact"><b>Email: </b><?php echo $contacts['email'];?></p>
-                            <br><br>
+                            <br>
+                            <br>
                             <h2 class = "contact"><b>Message</b><br></h2>
                             <p class = "contact"><?php echo $contacts['subject'];?></p>
                             <div class = "product-btns">
-                                <a href="delete-contact.php?id=<?php echo $contacts['id']; ?>"><button type = "button" class = "button button2"> Delete </button></a>
+                                <a href = "delete-contact.php?id=<?php echo $contacts['id']; ?>"><button type = "button" class = "button button2">Delete</button></a>
                             </div>
                         </div>
-                      
                     </div>
                     <!--End of Single Product -->
-                    
-            <?php endforeach; ?>
 
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
         <!--End of Product Section-->
+        
     </main>
 
     <!---Footer-->

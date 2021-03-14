@@ -1,5 +1,5 @@
 <?php 
-session_start();
+    session_start();
     $_SESSION;
     require 'config/dbconnect.php';
     $query = "SELECT * from homeproducts";
@@ -65,13 +65,13 @@ session_start();
                 <div class = "product">
                     <div class = "product-content">
                         <div class = "product-img">
-                                <a href="products.php"><img src = "images/<?php echo $product['image']; ?>" alt = "product image"></a>
+                            <a href="products.php"><img src = "images/<?php echo $product['image']; ?>" alt = "product image"></a>
                         </div>
                     </div>
                     <div class = "product-info">
                         <div class = "product-info-top">
                         </div>
-                            <a href = "products.php" class = "product-name"><?php echo $product['name']; ?></a>
+                        <a href = "products.php" class = "product-name"><?php echo $product['name']; ?></a>
                     </div>
                 </div>
                 <!--End of Single Product -->
