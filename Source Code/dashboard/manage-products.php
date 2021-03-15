@@ -21,7 +21,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatibel" content="IE=edge">
-    <title>Hamster Store - Manage Users</title>
+    <title>Hamster Store - Manage Products</title>
     <meta name="description" content="">
     <style> <?php include '../CSS/style.css'; include '../CSS/responsive.css'; ?> </style>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>   

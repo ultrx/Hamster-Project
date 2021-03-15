@@ -14,6 +14,7 @@ function refreshPage(){
     mysqli_select_db($con,"hamster");
     $query = "SELECT * FROM users";
     $result_users = mysqli_query($con, $query);
+   
 ?>
 <!DOCTYPE html>
 <html>
@@ -106,10 +107,13 @@ function refreshPage(){
                     }
                 }
                 if(isset($_POST['editUser'])){
+                    $id=$_GET['user_id'];
                     //mysqli_query($con,"INSERT INTO users VALUES('','$_POST[updatedRole])','$_POST[updatedName]','$_POST[updatedEmail]','$_POST[upassword]','')");
-                    mysqli_query($con,"UPDATE users SET user_name='$_POST[updatedName]', admin='$_POST[updatedRole]', email='$_POST[updatedEmail]' WHERE id = '$_GET[user_id]'");
+                    mysqli_query($con,"UPDATE users SET user_name='$_POST[updatedName]', admin='$_POST[updatedRole]', email='$_POST[updatedEmail]' WHERE user_id = '$id'");
                     header('Location: ../dashboard/manage-users.php');
                 }
+               
+                
                 ?>
             </div>
         </div>
