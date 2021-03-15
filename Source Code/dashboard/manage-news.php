@@ -49,7 +49,7 @@ session_start();
                     </tr>
                     <tr>
                         <td>Text </td>
-                        <td><textarea type="textbox"  class="textarea" name="text"></textarea></td>
+                        <td><textarea style="width: 100%;" type="textbox"  class="textarea" name="text"></textarea></td>
                     </tr>
                     <tr>
                         <td align ="center"colspan="2"><input type="submit" name="submit1" value="Add" onClick="window.location.reload();"></td>

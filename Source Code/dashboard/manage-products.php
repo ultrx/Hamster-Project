@@ -70,7 +70,7 @@
                     <tr>
                         <td>Product Category</td>
                         <td>
-                            <select name="pcategory">
+                            <select  name="pcategory" style="width: 70%;">
                                 <option  value="mouses">Mouse</option>
                                 <option  value="keyboards">Keyboard</option>
                                 <option  value="headsets">Headset</option>

@@ -37,7 +37,7 @@ session_start();
             </div>
         </div>
         <!---End of About Us-->
-
+    
         <div class="news">
             <div class="container">
                 <div class="card">
