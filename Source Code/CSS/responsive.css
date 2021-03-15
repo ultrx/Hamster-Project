@@ -105,10 +105,7 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
-    .product-col-r-bottom{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
+
 }
 @media screen and (min-width: 1200px){
     .home-product-items{
@@ -125,16 +122,6 @@
 @media screen and (min-width: 1336px){
     .home-product-items{
         grid-template-columns: repeat(3, 1fr);
-    }
-    .product-collection-wrapper{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .flex{
-        height: 60vh;
-    }
-    .product-col-left{
-        height: 121.5vh;
     }
 }
 /* End of Home Product Media Queries */
@@ -230,3 +217,38 @@
 	}
 }
 /* End of Footer Media Queries */
+
+/* About Media Queries */
+.news{
+	box-sizing: border-box;
+}
+.container:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.card{
+	float: left;
+	width: 33.3%;
+	padding: 10px;
+}
+@media screen and (min-width: 992px){
+    .card{
+		width: 100%;
+    }
+    .product-col-r-bottom{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (min-width: 1200px){
+    .card{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (min-width: 1336px){
+    .card{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+/* End of About Media Queries */

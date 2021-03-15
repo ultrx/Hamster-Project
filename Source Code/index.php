@@ -59,7 +59,7 @@
             <h1 class = "lg-title">Our Products</h1>
             <p class = "text-light">We offer you the best parts for Gaming</p>
             <div class = "home-product-items">
-            <?php foreach($result as $product): ?>
+                <?php foreach($result as $product): ?>
 
                 <!-- Single Product -->
                 <div class = "product">
@@ -69,13 +69,11 @@
                         </div>
                     </div>
                     <div class = "product-info">
-                        <div class = "product-info-top">
-                        </div>
                         <a href = "products.php" class = "product-name"><?php echo $product['name']; ?></a>
-                    </div>
                 </div>
-                <!--End of Single Product -->
-                    
+            </div>
+                <!--End of Single Product --> 
+
             <?php endforeach; ?>
         </div>
     </div>

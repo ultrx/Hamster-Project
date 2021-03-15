@@ -431,19 +431,20 @@ nav #linav.activenav, #linav:hover{
 
 /* About Us */
 .about-section{
-    background: url(images/aboutpic.jpg) no-repeat left;
+    background: no-repeat left;
     background-size: 60%;
     background-color:transparent;
     overflow: hidden;
-    padding: 100px 0;
-	border-bottom: 1px solid #45A29E;
+	margin: 0;
+	padding: 0;
 }
 .inner-container{
-    width: 50%;
+    width: 100%;
+	height: 100%;
     float: right;
     color: #45A29E;
     background-color: #1f2b3a;
-    padding: 150px;
+    padding: 200px;
     border: 1px solid #45A29E;
 }
 .inner-container h1{
@@ -937,7 +938,7 @@ img{
 {
     margin: 10% auto;
     height:20em;
-    width:310px;
+    width:290px;
 	border-radius: 10px;
     display:flex;
     position:relative;
@@ -946,7 +947,7 @@ img{
 }
 .property-image
 {
-  width:310px;
+  width:290px;
   padding:0;
   position:Absolute;
   top:0px;
@@ -956,11 +957,9 @@ img{
   background-size:cover;
   background-repeat:no-repeat;
 }
-.property-description
-{
+.property-description{
   background-color: #45A29E transparent;
-  height:12em;
-  width:310px;
+  width:290px;
   position:absolute;
   bottom:0em;
   text-align:center;
@@ -974,22 +973,19 @@ img{
     padding: 3px;
     color: #aaaaaa;
 }
-.news1 {
-	margin-top:5px;
+.news1{
 	height:10em;
-  	width:310px;
+  	width:290px;
   	overflow-y: scroll;
 	text-align:center;
 	color:#ffffff;
-	
 }
 .news-title{
 
 	font-family:Verdana, Geneva, Tahoma, sans-serif;
-	
 }
 ::-webkit-scrollbar {
-	width: 4px;
+	width: 5px;
   }
   
   /* Handle */
@@ -1000,7 +996,7 @@ img{
   
   /* Handle on hover */
    ::-webkit-scrollbar-thumb:hover {
-	background: grey;; 
+	background: grey; 
   }
 .textarea{
 	width: 500px;
