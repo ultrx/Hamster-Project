@@ -7,7 +7,7 @@
             <a href="contact.php">CONTACT</a></li>    
         </div>
         <p class="footer-company">
-            Hamster Store @ 2021
+            Hamster Store © 2021
         </p>
     </div>
     <div class="footer-center">

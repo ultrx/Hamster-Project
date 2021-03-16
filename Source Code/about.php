@@ -85,7 +85,11 @@ session_start();
         <!--End of What we offer-->
 
     </main>
-
+    
+    <!---Scroll Top Button-->
+    <?php include 'includes/scrolltop.php'; ?>
+    <!---Scroll Top Button-->
+    
     <!---Footer-->
     <?php include 'includes/footer.php'; ?>
     <!---End of Footer-->

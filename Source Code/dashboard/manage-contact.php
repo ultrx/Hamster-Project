@@ -39,6 +39,8 @@
                             <br>
                             <p class = "contact"><b>Email: </b><?php echo $contacts['email'];?></p>
                             <br>
+                            <p class = "contact"><b>Date sent: </b><?php echo $contacts['date'];?></p>
+                            <br>
                             <br>
                             <h2 class = "contact"><b>Message</b><br></h2>
                             <p class = "contact"><?php echo $contacts['subject'];?></p>
@@ -56,7 +58,11 @@
         <!--End of Product Section-->
         
     </main>
-
+    
+    <!---Scroll Top Button-->
+    <?php include '../includes/scrolltop.php'; ?>
+    <!---Scroll Top Button-->
+    
     <!---Footer-->
     <?php include '../includes/admin-footer.php'; ?>
     <!---End of Footer-->

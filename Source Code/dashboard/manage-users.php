@@ -112,6 +112,10 @@ function refreshPage(){
         </div>
     </main>
 
+    <!---Scroll Top Button-->
+    <?php include '../includes/scrolltop.php'; ?>
+    <!---Scroll Top Button-->
+
     <!---Footer-->
     <?php include '../includes/admin-footer.php'; ?>
     <!---End of Footer-->

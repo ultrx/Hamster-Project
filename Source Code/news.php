@@ -27,7 +27,8 @@ $result_news = mysqli_query($con,$query);
         <!--News Section -->
         <div class = "products">
             <div class = "products-container">
-                <div class = "product-items">
+                <h1 class = "lg-title">GAMING NEWS</h1>
+                <div class = "home-product-items">
                 <?php foreach($result_news as $news): ?>
                 <!-- Single News -->
                  <div class="property-card">
@@ -58,9 +59,11 @@ $result_news = mysqli_query($con,$query);
         </div>
         <!--End of News Section-->
 
-        
-
     </main>
+    
+    <!---Scroll Top Button-->
+    <?php include 'includes/scrolltop.php'; ?>
+    <!---Scroll Top Button-->
 
     <!---Footer-->
     <?php include 'includes/footer.php'; ?>

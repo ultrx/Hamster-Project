@@ -7,7 +7,7 @@
             <a href="contact.html">CONTACT</a></li>    
         </div>
         <p class="footer-company">
-            Admin Dashboard @ 2021
+            Admin Dashboard © 2021
         </p>
     </div>
     <div class="footer-center">
@@ -27,7 +27,7 @@
     <div class="footer-right">
         <p class="footer-company-about">
             <span>Admin Dashboard</span>
-            Powered by Hamster
+            Powered by Hamster Developers
         </p>
         <div class="footer-social">
             <a href="https://www.facebook.com" target="_blank"><img class="socials-logo" src="../images/fb.png"></a>

@@ -25,7 +25,7 @@ session_start();
     <!---End of Alerts--> 
 
      <!---NavBar-->
-     <?php  $page = 'news'; include '../includes/admin-navbar.php'; ?>
+     <?php  $page = 'manage-news'; include '../includes/admin-navbar.php'; ?>
     <!---End of NavBar-->
 
     <main>
@@ -81,7 +81,7 @@ session_start();
     <!--News Section -->
     <div class = "products">
         <div class = "products-container">
-            <div class = "product-items">
+            <div class = "home-product-items">
             <?php foreach($result_news as $news): ?>
 
             <!-- Single News -->
@@ -114,7 +114,11 @@ session_start();
     <!--End of News Section-->
 
     </main>
-
+    
+    <!---Scroll Top Button-->
+    <?php include '../includes/scrolltop.php'; ?>
+    <!---Scroll Top Button-->
+    
     <!---Footer-->
     <?php include '../includes/admin-footer.php'; ?>
     <!---End of Footer-->

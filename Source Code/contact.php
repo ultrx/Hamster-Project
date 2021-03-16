@@ -53,7 +53,8 @@
         <?php
             if(isset($_POST["submit"])){
                 if(!empty($_POST["name"]) && !empty($_POST["lastname"]) && !empty($_POST["email"]) && !empty($_POST["subject"])){
-                    mysqli_query($con,"INSERT INTO contacts VALUES('','$_POST[name]','$_POST[lastname]','$_POST[email]','$_POST[subject]')");
+                    $id_time = date("Y-m-d H:i:s",time());
+                    mysqli_query($con,"INSERT INTO contacts VALUES('','$_POST[name]','$_POST[lastname]','$_POST[email]','$_POST[subject]','$id_time')");
                     echo '<script type="text/javascript">';
                     echo 'document.getElementById("alert success").style.display = "block" ';
                     echo '</script>';

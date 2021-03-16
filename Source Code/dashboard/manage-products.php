@@ -126,7 +126,7 @@
                             <a href = "<?php echo $product['url']; ?>"target="_blank" class = "product-name"><?php echo $product['name']; ?></a>
                             <p class = "product-price">$<?php echo $product['price_before']; ?></p>
                             <p class = "product-price">$<?php echo $product['price_after']; ?></p>
-                            <p class="product-name" align="center">Added by: <?php echo $product['added_by']; ?>
+                            <p class="addedBy" align="center">Added by: <?php echo $product['added_by']; ?>
                         </div>
                         <div class = "off-info">    
                         </div>
@@ -165,7 +165,7 @@
                             <a href = "<?php echo $product['url']; ?>"target="_blank" class = "product-name"><?php echo $product['name']; ?></a>
                             <p class = "product-price">$<?php echo $product['price_before']; ?></p>
                             <p class = "product-price">$<?php echo $product['price_after']; ?></p>
-                            <p class="product-name" align="center">Added by: <?php echo $product['added_by']; ?>
+                            <p class="addedBy" align="center">Added by: <?php echo $product['added_by']; ?>
                         </div>
                     </div>
             <!--End of Single Product -->
@@ -199,7 +199,7 @@
                             <a href = "<?php echo $product['url']; ?>"target="_blank" class = "product-name"><?php echo $product['name']; ?></a>
                             <p class = "product-price">$<?php echo $product['price_before']; ?></p>
                             <p class = "product-price">$<?php echo $product['price_after']; ?></p>
-                            <p class="product-name" align="center">Added by: <?php echo $product['added_by']; ?>
+                            <p class="addedBy" align="center">Added by: <?php echo $product['added_by']; ?>
                         </div>
                         <div class = "off-info">
                         </div>
@@ -212,6 +212,10 @@
         <!--End of Product Section-->
     
  </main>
+     
+    <!---Scroll Top Button-->
+    <?php include '../includes/scrolltop.php'; ?>
+    <!---Scroll Top Button-->
 
     <!---Footer-->
     <?php include '../includes/admin-footer.php'; ?>
