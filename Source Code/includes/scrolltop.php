@@ -6,7 +6,7 @@
   bottom: 20px;
   right: 30px;
   z-index: 99;
-  font-size: 15px;
+  font-size: 20px;
   border: none;
   outline: none;
   background-color: #45a29e;
@@ -21,7 +21,7 @@
   background-color: #3a807c;
 }
 </style>
-<button onclick="topFunction()" id="myBtnScroll" title="Go to top">Top</button>
+<button onclick="topFunction()" id="myBtnScroll" title="Go to top">▲</button>
 
 <script>
 //Get the button

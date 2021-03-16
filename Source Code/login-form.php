@@ -184,6 +184,7 @@ if(isset($_POST['register'])) {
         $user_name = $_POST['user_name'];
         $email = $_POST['email'];
         $password = $_POST['passwordReg'];
+        $password = md5($password);
 
         $sql_u = "SELECT * FROM users WHERE user_name='$user_name'";
         $sql_e = "SELECT * FROM users WHERE email='$email'";

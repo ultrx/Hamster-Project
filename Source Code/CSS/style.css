@@ -944,7 +944,7 @@ img{
 {
     margin: 10% auto;
     height:20em;
-    width:350px;
+    width:310px;
 	border-radius: 10px;
     display:flex;
     position:relative;
@@ -953,7 +953,7 @@ img{
 }
 .property-image
 {
-  width:350px;
+  width:310px;
   padding:0;
   position:Absolute;
   top:0px;
@@ -967,7 +967,7 @@ img{
 {
   background-color: #45A29E transparent;
   height:12em;
-  width:350px;
+  width:310px;
   position:absolute;
   bottom:0em;
   text-align:center;
@@ -984,7 +984,7 @@ img{
 .news1 {
 	margin-top:5px;
 	height:10em;
-  	width:350px;
+  	width:310px;
   	overflow-y: scroll;
 	text-align:center;
 	color:#ffffff;
