@@ -27,63 +27,19 @@ session_start();
             <div class="inner-container">
                 <h1>ABOUT US</h1>
                 <p class="text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus velit ducimus, enim inventore earum, eligendi nostrum pariatur necessitatibus eius dicta a voluptates sit deleniti autem error eos totam nisi neque voluptates sit deleniti autem error eos totam nisi neque.
-                </p>
+                    Hamster™ is the world’s leading lifestyle brand for gamers.
+
+                    The triple-headed snake trademark of Hamster is one of the most recognized logos in the global gaming and esports communities.
+
+                    With a fan base that spans every continent, the company has designed and built the world’s largest gamer-focused ecosystem of hardware, software and services. </p>
                 <div class="hamster-provides">
-                    <span>Quality Products</span>
-                    <span>Great Warranty</span>    
-                    <span>Customer Services</span>
+                    <a href="products.php"><span>Quality Products</span></a>
+                    <a href="news.php"><span>Gaming News</span></a> 
+                    <a href="contact.php"><span>Customer Services</span></a>
                 </div>
             </div>
         </div>
         <!---End of About Us-->
-    
-        <!--What we offer-->
-        <div class="news">
-            <div class="container">
-                <div class="card">
-                    <div class="face face1">
-                        <div class="content">
-                            <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/design_128.png?raw=true">
-                            <h3>Design</h3>
-                        </div>
-                    </div>
-                    <div class="face face2">
-                        <div class="content">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="face face1">
-                        <div class="content">
-                            <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/code_128.png?raw=true">
-                            <h3>Program</h3>
-                        </div>
-                    </div>
-                    <div class="face face2">
-                        <div class="content">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="face face1">
-                        <div class="content">
-                            <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/launch_128.png?raw=true">
-                            <h3>Launch</h3>
-                        </div>
-                    </div>
-                    <div class="face face2">
-                        <div class="content">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--End of What we offer-->
-
     </main>
     
     <!---Scroll Top Button-->
